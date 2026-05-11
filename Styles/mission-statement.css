@@ -28,6 +28,12 @@ h2 {
   color: aliceblue;
   font-size: clamp(1rem, 1.5vw, 1.5rem); /*text responsiveness*/
 }
+
+#mission-last-par {
+  margin: 0 0;
+  padding-bottom: 1em;
+}
+
 .mission-word-color {
   color: rgb(247, 105, 2);
 }
