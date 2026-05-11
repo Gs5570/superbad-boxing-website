@@ -15,7 +15,11 @@
 #service-title {
   color: white;
   font-weight: bolder;
-  font-size: clamp(1rem, 4vw, 3.5rem); /*text responsiveness*/
+  font-size: clamp(
+    1rem,
+    3.5vw,
+    3.5rem
+  ); /*text responsiveness. --  our service text*/
 }
 
 #service-description {
@@ -41,19 +45,28 @@
 .service {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
+  /* flex-wrap: wrap; */
   width: 400px;
+  height: 1000px;
+  gap: 0;
 }
 
 .service-name {
   font-weight: bolder;
 }
 
+.service-img-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
 .service-image {
   box-shadow: rgba(247, 105, 2, 1) 0px 5px 15px;
-  /* max-width: 100%;  */
-  max-height: 50%;
+  max-width: 400px;
+  max-height: 600px;
   object-fit: cover;
   border-radius: 20px;
 }

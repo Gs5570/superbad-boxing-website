@@ -6,12 +6,29 @@
   overflow: hidden; /* FIX: prevent any child from bleeding out */
 }
 
+.fa-brands,
+.fa-solid {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+.fa-solid:hover {
+  cursor: pointer;
+  color: aliceblue;
+  text-decoration: underline double;
+}
+.fa-brands:hover {
+  cursor: pointer;
+  color: aliceblue;
+  text-decoration: underline double;
+}
+
 .coaches-section-container > h2 {
   margin-top: 0;
   text-align: center;
   display: block;
   background-color: aliceblue;
   padding: 0.7em;
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
 .coach-img {

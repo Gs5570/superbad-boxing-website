@@ -17,7 +17,11 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.5rem, 2.3vw, 2.3rem); /*text responsiveness*/
+  font-size: clamp(
+    1rem,
+    2vw,
+    2rem
+  ); /*text responsiveness  -- clamp(1.5rem, 2.3vw, 2.3rem)*/
 }
 
 .mission-item-title > h2 {
