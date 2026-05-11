@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta name="author" content="Galekwan Sango">
+    <link rel="stylesheet" href="./Styles/style.css">
+    <title>SupeBad</title>
+</head>
+
+<body>
+    <div class="body-container">
+        <div class="header-container">
+
+            <!-- Logo visible in header bar always -->
+            <img id="site-logo" src="./Media/logo.png" alt="site logo">
+
+            <nav class="nav-bar-container">
+
+                <!-- Hidden checkbox — CSS-only toggle -->
+                <input class="side-menu" type="checkbox" id="side-menu" />
+
+                <!-- Hamburger / X — fixed top-right on mobile -->
+                <label class="hamb" for="side-menu">
+                    <span class="hamb-line"></span>
+                </label>
+
+                <!-- Nav overlay -->
+                <ul class="nav-items-container">
+
+                    <!-- Logo shown inside the overlay on mobile -->
+                    <img class="overlay-logo" src="./Media/logo.png" alt="site logo">
+
+                    <li class="nav-items">About</li>
+                    <li class="nav-items">Coaches</li>
+                    <li class="nav-items">Fighters</li>
+                    <li class="nav-items">Gallery</li>
+                    <li class="nav-items">Membership</li>
+                    <li class="nav-items">Program</li>
+                    <li class="nav-items">Tribute</li>
+                </ul>
+
+            </nav>
+
+        </div>
+        <div class="content-container">
+
+        </div>
+        <div class="footer-container"></div>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>

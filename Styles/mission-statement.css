@@ -1,0 +1,37 @@
+.Mission-statement-container {
+  background-color: #111;
+}
+
+.mission-item {
+  /* padding: 0 3em; */
+  width: 65%;
+  margin: auto;
+}
+
+h1 {
+  font-size: clamp(1rem, 4vw, 4rem); /*text responsiveness*/
+  color: aliceblue;
+  text-align: center;
+  padding: 0.5em 0;
+  background-color: rgb(247, 105, 2);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.3vw, 2.3rem); /*text responsiveness*/
+}
+
+.mission-item-title > h2 {
+  color: rgb(247, 105, 2);
+  font-weight: bold;
+}
+.mission-description {
+  color: aliceblue;
+  font-size: clamp(1rem, 1.5vw, 1.5rem); /*text responsiveness*/
+}
+.mission-word-color {
+  color: rgb(247, 105, 2);
+}
+
+.mission-description > li {
+  line-height: 1.6; /* Recommended for readability */
+}

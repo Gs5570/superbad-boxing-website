@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <meta name="author" content="Galekwan Sango" />
+
+    <!-- The order the styles matters: -->
+
+    <!-- general style -->
+    <link rel="stylesheet" href="./Styles/style.css" />
+
+    <!-- responsive break points -->
+    <link rel="stylesheet" href="./Styles/responsiveBreak.css" />
+
+    <!-- carousel style -->
+    <link rel="stylesheet" href="./Styles/carousel.css" />
+
+    <!-- service section -->
+    <link rel="stylesheet" href="./Styles/services.css" />
+
+    <!-- Mission statement section -->
+    <link rel="stylesheet" href="./Styles/mission-statement.css" />
+    <title>SuperBad</title>
+</head>
+
+<body>
+    <div class="body-container">
+        <div class="header-container">
+            <!-- Logo visible in header bar always -->
+            <img id="site-logo" src="./Media/logo.png" alt="site logo" />
+
+            <nav class="nav-bar-container">
+                <!-- Hidden checkbox — CSS-only toggle -->
+                <input class="side-menu" type="checkbox" id="side-menu" />
+
+                <!-- Hamburger / X — fixed top-right on mobile -->
+                <label class="hamb" for="side-menu">
+                    <span class="hamb-line"></span>
+                </label>
+
+                <!-- Nav overlay -->
+                <ul class="nav-items-container">
+                    <!-- Logo shown inside the overlay on mobile -->
+                    <img class="overlay-logo" src="./Media/logo.png" alt="site logo" />
+
+                    <li class="nav-items">About</li>
+                    <li class="nav-items">Coaches</li>
+                    <li class="nav-items">Fighters</li>
+                    <li class="nav-items">Gallery</li>
+                    <li class="nav-items">Membership</li>
+                    <li class="nav-items">Program</li>
+                    <li class="nav-items">Tribute</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content-container">
+            <div class="carousel">
+                <input type="radio" id="trigger1" name="slider" />
+                <label for="trigger1"><span class="sr-only">Slide 1 of 5. A family photo of LJ, Tony and their dad
+                        .</span></label>
+                <div class="slide bg1"></div>
+
+                <input type="radio" id="trigger2" name="slider" checked autofocus />
+                <label for="trigger2"><span class="sr-only">Slide 2 of 5. A photo a sparring session
+                    </span></label>
+                <div class="slide bg2"></div>
+
+                <input type="radio" id="trigger3" name="slider" />
+                <label for="trigger3"><span class="sr-only">Slide 3 of 5. A photo a sparring session .</span></label>
+                <div class="slide bg3"></div>
+
+                <input type="radio" id="trigger4" name="slider" />
+                <label for="trigger4"><span class="sr-only">Slide 4 of 5. A photo of a people watching
+                        sparring.</span></label>
+                <div class="slide bg4"></div>
+
+                <input type="radio" id="trigger5" name="slider" />
+                <label for="trigger5"><span class="sr-only">Slide 5 of 5. A photo of a kid boxing.</span></label>
+                <div class="slide bg5"></div>
+            </div>
+
+            <div class="services-container">
+                <div id="service-title-container">
+                    <p id="service-title">OUR SERVICES</p>
+                </div>
+                <p id="service-description">
+                    We offer a wide range of programs to help our members succeed. All
+                    ages, levels, and backgrounds are welcome to join.
+                </p>
+
+                <div class="service-category-container">
+                    <div class="service">
+                        <img class="service-image" src="./Media/hitting-bad-unsplash.jpg" alt="boxing-service" />
+                        <p class="service-name">BOXING</p>
+                        <p class="service-details">
+                            We offer a range of boxing services to suit every fitness
+                            journey. Our signature boxing class, Round By Round, combines
+                            cardio, strength training, and technique, welcoming all skill
+                            levels to build confidence while burning calories! For more
+                            personalized attention, our semi-private coaching provides
+                            focused instruction in a small group setting, blending
+                            individual support with the energy of a team. If you’re looking
+                            for fully customized training, our one-on-one boxing coaching
+                            sessions are tailored to help you master technique, enhance
+                            fitness, and reach your specific goals with expert guidance..
+                        </p>
+                    </div>
+                    <div class="service">
+                        <img class="service-image" src="./Media/strength-&-conditioning-unsplash.jpg"
+                            alt="boxing-service" />
+                        <p class="service-name">STRENGTH AND CONDITIONING</p>
+                        <p class="service-details">
+                            Our strength and conditioning training services are designed to
+                            help you build strength, power, and confidence. Inspired by
+                            boxing sports science our strength training program, combines
+                            expert coaching with a high-energy atmosphere, making it perfect
+                            for all levels. Our one-on-one coaching offers customized
+                            guidance to help you refine your technique, hit personal
+                            records, and achieve your unique fitness goals..
+                        </p>
+                    </div>
+                    <div class="service">
+                        <img class="service-image" src="./Media/private-session-splash.jpg" alt="boxing-service" />
+                        <p class="service-name">PRIVATE LESSONS</p>
+                        <p class="service-details">
+                            Our private coaching sessions provide focused instruction for a
+                            limit of four people in a small group setting, ensuring you get
+                            the support you need while enjoying the camaraderie of others.
+                            Each person receives tailored training and a full-body workout
+                            suitable for all fitness levels. For those that don’t want all
+                            the attention on themselves, semi -private training is a great
+                            alternative. Combining strength training and boxing, each class
+                            blends perfectly, leaving you feeling unstoppable.
+                        </p>
+                    </div>
+                </div>
+                <div class="Mission-statement-container">
+                    <h1>Mission Statement</h1>
+                    <div class="mission-item">
+                        <div class="mission-item-title">
+                            <h2>Who we are?</h2>
+                            <p class="mission-description">
+                                At <span class="mission-word-color">SuperBad Boxing Gym</span>, we are more than a
+                                boxing gym — we are a
+                                Detroit-born family and community dedicated to building
+                                champions inside and outside the ring. Founded by professional fighters with deep roots
+                                in the city, we use boxing as a
+                                tool to develop discipline, confidence, leadership, and resilience in people of all
+                                ages. Inspired by Detroit’s fighting
+                                spirit and legendary boxing culture, we strive to create an environment where hard work,
+                                respect, and accountability
+                                shape the next generation.
+                            </p>
+                        </div>
+                        <div class="mission-item-title">
+                            <h2>Why People Choose Us?</h2>
+                            <p class="mission-description">
+                                People choose <span class="mission-word-color">SuperBad Boxing Gym</span> because we
+                                combine elite-level boxing knowledge with a
+                                genuine family atmosphere.
+                                Whether someone is training to compete, get in shape, build confidence, or simply find
+                                direction, our gym provides a
+                                supportive environment where everyone is pushed to grow. Our members train alongside
+                                champions, experienced coaches, and
+                                motivated athletes who inspire one another daily. We are known for our authentic boxing
+                                culture, strong mentorship, and
+                                commitment to helping every individual reach their full potential
+                            </p>
+                        </div>
+                        <div class="mission-item-title">
+                            <h2>Our Mission</h2>
+                            <p class="mission-description">
+                                Our mission is to empower the youth and community of Detroit through boxing, fitness,
+                                mentorship, and opportunity. We
+                                aim to build champions in life before champions in the ring by teaching discipline,
+                                mental toughness, self-respect, and
+                                perseverance. Through structured training, guidance, and positive leadership, we seek to
+                                create a safe and motivating
+                                environment where individuals can transform their lives and pursue greatness both
+                                athletically and personally
+                            </p>
+                        </div>
+                        <div class="mission-item-title">
+                            <h2>Our Team</h2>
+                            <p class="mission-description">
+                                Our team is led by experienced fighters, trainers, and mentors who understand the
+                                dedication required to succeed at the
+                                highest level. Co-founded by Tony Harrison and L.J. Harrison, our coaches bring
+                                real-world experience, passion, and
+                                mentorship to every athlete who walks through our doors. We believe in leading by
+                                example and creating strong
+                                relationships with our members through encouragement, accountability, and hard work.
+                            </p>
+                        </div>
+                        <div class="mission-item-title">
+                            <h2>What We Offer:</h2>
+                            <p class="mission-description">
+                                At <span class="mission-word-color">SuperBad Boxing Gym</span>
+
+                            </p>
+
+                            <ul class="mission-description">
+                                <li>Elite boxing training for beginners, amateurs, and professional fighters</li>
+                                <li>Youth development and mentorship programs</li>
+                                <li>Strength and conditioning</li>
+                                <li>Sparring and competition preparation</li>
+                                <li>Fitness and weight-loss boxing programs</li>
+                                <li>Personal training and athlete developmen</li>
+                                <li>A motivating community focused on growth, discipline, and excellence</li>
+                            </ul>
+                            <p class="mission-description">Our goal is to provide every member — regardless of age or
+                                experience — with the tools,
+                                coaching, and environment needed
+                                to become stronger mentally, physically, and emotionally.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="Coaches-container">
+                    <h2>OUR COACHES</h2>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container"></div>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>

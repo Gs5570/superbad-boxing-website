@@ -1,0 +1,179 @@
+/* ═══════════════════════════════════════════
+   CAROUSEL
+   Pure CSS radio-button carousel.
+   Structure per slide:
+     input[type=radio]  ← hidden, controls state
+     label              ← dot + clickable arrow area
+     div.slide          ← background image
+═══════════════════════════════════════════ */
+
+/* Wrapper */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%; /* fills .content-container */
+  overflow: hidden;
+  background-color: #000;
+}
+.carousel {
+  margin-bottom: 100px;
+}
+
+/* ── Slides ── */
+.slide {
+  position: absolute;
+  inset: 0; /* top:0 right:0 bottom:0 left:0 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateX(-100%);
+  transition: transform 0.45s ease;
+  z-index: 1;
+}
+
+/* All slides after the checked input shift right (already passed) */
+.carousel input[type='radio']:checked ~ .slide {
+  transform: translateX(100%);
+}
+
+/* The slide immediately after the checked input is active */
+.carousel input[type='radio']:checked + label + .slide {
+  transform: translateX(0);
+}
+
+/* ── Radio inputs — scoped, actually clickable ── */
+.carousel input[type='radio'] {
+  /* visually hidden but still interactive */
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+}
+
+/* ── Dots ── */
+.carousel label {
+  position: absolute;
+  bottom: 24px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 20;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  /* Center the dot group: 5 dots × 28px spacing, total 112px, offset half */
+  transform: translateX(-50%);
+}
+
+/* HTML per slide: input label div — so labels are at child 2, 5, 8, 11, 14 */
+.carousel label:nth-child(2) {
+  left: calc(50% - 56px);
+}
+.carousel label:nth-child(5) {
+  left: calc(50% - 28px);
+}
+.carousel label:nth-child(8) {
+  left: calc(50% + 0px);
+}
+.carousel label:nth-child(11) {
+  left: calc(50% + 28px);
+}
+.carousel label:nth-child(14) {
+  left: calc(50% + 56px);
+}
+
+.carousel label:hover {
+  transform: translateX(-50%) scale(1.3);
+}
+
+/* Active dot */
+.carousel input[type='radio']:checked + label {
+  background-color: white;
+}
+
+/* Keyboard focus ring */
+.carousel input[type='radio']:focus-visible + label {
+  outline: 2px solid teal;
+  outline-offset: 3px;
+}
+
+/* ── Arrows ──
+   Rendered as real DOM elements by index.js
+   CSS-only fixed pseudo-elements don't work in browsers */
+
+.carousel-arrow {
+  position: absolute;
+  top: var(--header-h);
+  height: calc(100vh - var(--header-h));
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 50;
+  background: transparent;
+  border: none;
+  padding: 0;
+  transition: background 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.carousel-arrow svg {
+  width: 36px;
+  height: 36px;
+  fill: white;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+  transition: transform 0.2s ease;
+}
+
+.carousel-arrow:hover svg {
+  transform: scale(1.2);
+}
+
+.carousel-arrow.prev {
+  left: 0;
+}
+.carousel-arrow.next {
+  right: 0;
+}
+
+.carousel-arrow.hidden {
+  display: none;
+}
+
+/* ── Accessibility ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Background images ── */
+.bg1 {
+  background-image: url(../Media/familly-carousel.webp);
+}
+.bg2 {
+  background-image: url(../Media/dad-coaching.webp);
+}
+.bg3 {
+  background-image: url(../Media/sparring.webp);
+}
+.bg4 {
+  background-image: url(../Media/superbad.webp);
+}
+.bg5 {
+  background-image: url(../Media/kid-2.webp);
+}

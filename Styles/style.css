@@ -1,0 +1,184 @@
+/* ═══════════════════════════════════════════
+   BASE
+═══════════════════════════════════════════ */
+html {
+  font-family: 'Raleway', 'Dosis', 'Roboto', sans-serif, system-ui;
+  font-optical-sizing: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  line-height: 1.6; /* Recommended for readability */
+}
+
+/* ═══════════════════════════════════════════
+   HEADER — fixed, always visible
+═══════════════════════════════════════════ */
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 13px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 500;
+  border-bottom: solid rgb(247, 105, 2) 5px;
+}
+
+#site-logo {
+  max-height: 100px;
+  max-width: 100px;
+  border-radius: 50%;
+  display: block;
+}
+
+/* ═══════════════════════════════════════════
+   LAYOUT
+   Use a CSS variable for header height so
+   every calc() stays in sync automatically
+═══════════════════════════════════════════ */
+:root {
+  --header-h: 126px; /* 100px logo + 13px padding top + 13px padding bottom */
+}
+
+.body-container {
+  padding-top: var(--header-h);
+  min-height: 100vh;
+}
+
+.content-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--header-h));
+}
+
+.footer-container {
+  background-color: #111;
+  min-height: 60px;
+}
+
+/* ═══════════════════════════════════════════
+   DESKTOP NAV
+═══════════════════════════════════════════ */
+.nav-bar-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items {
+  color: antiquewhite;
+  font-weight: bold;
+  cursor: pointer;
+  transition: font-size 0.15s ease;
+}
+
+.nav-items:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-color: rgb(247, 105, 2);
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+/* ═══════════════════════════════════════════
+   HAMBURGER CHECKBOX — always hidden
+═══════════════════════════════════════════ */
+.side-menu {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════
+   HAMBURGER ICON
+═══════════════════════════════════════════ */
+.hamb {
+  display: none; /* shown only on mobile via media query */
+  cursor: pointer;
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 1100;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamb-line {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: antiquewhite;
+  position: relative;
+  transition: background-color 0s 0.15s;
+}
+
+.hamb-line::before,
+.hamb-line::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: antiquewhite;
+  position: absolute;
+  left: 0;
+  transition:
+    top 0.3s ease 0.3s,
+    bottom 0.3s ease 0.3s,
+    transform 0.3s ease 0s;
+}
+
+.hamb-line::before {
+  top: -9px;
+}
+.hamb-line::after {
+  bottom: -9px;
+}
+
+/* Checked → X (two-step animation) */
+.side-menu:checked ~ .hamb .hamb-line {
+  background-color: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  top: 0;
+  transform: rotate(45deg);
+  transition:
+    top 0.3s ease 0s,
+    transform 0.3s ease 0.3s;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition:
+    bottom 0.3s ease 0s,
+    transform 0.3s ease 0.3s;
+}
+
+/* ═══════════════════════════════════════════
+   OVERLAY LOGO — only visible inside mobile menu
+═══════════════════════════════════════════ */
+.overlay-logo {
+  display: none;
+}
