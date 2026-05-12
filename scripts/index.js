@@ -59,3 +59,19 @@ if (inputs.length) {
   // Set initial state
   updateArrows();
 }
+
+// ─────────────────────────────────────────
+// Highlight the active nav item based on
+// the current page URL
+// ─────────────────────────────────────────
+
+const navLinks = document.querySelectorAll('.nav-items a');
+const currentPage = window.location.pathname; // e.g. "/about.html"
+
+navLinks.forEach((link) => {
+  const linkPath = new URL(link.href).pathname;
+
+  if (linkPath === currentPage) {
+    link.classList.add('nav-active');
+  }
+});

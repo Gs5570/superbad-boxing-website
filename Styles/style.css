@@ -18,6 +18,7 @@ body {
   height: 100vh;
 }
 
+/* paragraph element */
 p {
   line-height: 1.6; /* Recommended for readability */
 }
@@ -102,6 +103,33 @@ p {
   text-decoration-color: rgb(247, 105, 2);
   font-size: 1.1rem;
   font-weight: bolder;
+}
+
+/* remove anchor element style */
+.nav-items a,
+.nav-items a:link,
+.nav-items a:visited,
+.nav-items a:hover,
+.nav-items a:active {
+  color: antiquewhite;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-items a:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-color: rgb(247, 105, 2);
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+/* nav bar focus location on the site */
+.nav-items a.nav-active {
+  color: rgb(247, 105, 2); /* orange — matches your brand color */
+  text-decoration: underline double;
+  text-underline-offset: 8px;
+  text-decoration-color: rgb(247, 105, 2);
 }
 
 /* ═══════════════════════════════════════════
