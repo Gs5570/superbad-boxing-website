@@ -4,7 +4,6 @@
 html {
   font-family: 'Raleway', 'Dosis', 'Roboto', sans-serif, system-ui;
   font-optical-sizing: auto;
-  height: 100vh;
 }
 
 *,
@@ -16,6 +15,7 @@ html {
 body {
   padding: 0;
   margin: 0;
+  height: 100vh;
 }
 
 p {
@@ -187,6 +187,9 @@ p {
 /* ══════════════════════════════════════
   contact us section
 ═══════════════════════════════════════════ */
+.contact-us-container {
+  padding: 20px;
+}
 #contact-us-title,
 #get-in-touch-title {
   text-align: center;
