@@ -28,7 +28,7 @@
   display: block;
   background-color: aliceblue;
   padding: 0.7em;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 4vw, 4rem);
 }
 
 .coach-img {

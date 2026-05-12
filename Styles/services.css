@@ -29,27 +29,29 @@
   width: auto;
 }
 
-/*parent*/
+/*parent of service*/
 .service-category-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  width: 100vw;
 
-  /* justify-content: space-around; */
-
-  gap: 5em;
+  gap: 1.5em;
 
   padding: 0 3rem;
+  flex-wrap: wrap;
 }
 
+/* service children */
 .service {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
   /* flex-wrap: wrap; */
+  flex: 1 1 0;
   width: 400px;
-  height: 1000px;
+  /* height: 1000px; */
   gap: 0;
 }
 
@@ -65,8 +67,14 @@
 
 .service-image {
   box-shadow: rgba(247, 105, 2, 1) 0px 5px 15px;
-  max-width: 400px;
-  max-height: 600px;
+  width: 400px;
+  height: 600px;
   object-fit: cover;
+  object-position: center;
   border-radius: 20px;
+  display: block;
+}
+
+.service-details {
+  flex: 1; /* grows to fill, aligning bottoms */
 }
