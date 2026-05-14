@@ -1,0 +1,877 @@
+/* ═══════════════════════════════════════════
+   FIGHTERS PAGE — fighters-page.css
+   Theme: WHITE background · black text · orange accents
+   Balances the dark pages on the rest of the site
+═══════════════════════════════════════════ */
+
+:root {
+  --fp-orange: rgb(247, 105, 2);
+  --fp-orange-dark: rgb(200, 82, 0);
+  --fp-orange-light: rgba(247, 105, 2, 0.08);
+  --fp-black: #111111;
+  --fp-dark: #222222;
+  --fp-grey: #e5e5e5;
+  --fp-grey-mid: #999999;
+  --fp-white: #ffffff;
+  --fp-bg: #f7f7f7; /* off-white page background */
+  --fp-win: #1a7a3c;
+  --fp-loss: #c0392b;
+  --fp-draw: #777777;
+}
+
+/* ── HERO — dark to contrast the white body ── */
+.fp-hero {
+  position: relative;
+  width: 100%;
+  height: calc(50vh - var(--header-h));
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=1400&q=80');
+  background-size: cover;
+  background-position: center 40%;
+  overflow: hidden;
+}
+
+.fp-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(247, 105, 2, 0.18) 100%
+  );
+}
+
+.fp-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.fp-eyebrow {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fp-orange);
+  margin: 0 0 12px;
+}
+
+.fp-hero-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.05;
+  margin: 0 0 12px;
+}
+
+.fp-accent {
+  color: var(--fp-orange);
+}
+
+.fp-hero-sub {
+  font-family: 'Dosis', sans-serif;
+  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ── CONTROLS BAR ── */
+.fp-controls {
+  background-color: var(--fp-white);
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--fp-grey);
+  position: sticky;
+  top: var(--header-h);
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Filter pills */
+.fp-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fp-filter-btn {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 7px 18px;
+  border-radius: 30px;
+  border: 1.5px solid var(--fp-grey);
+  background: transparent;
+  color: var(--fp-grey-mid);
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.fp-filter-btn:hover {
+  border-color: var(--fp-orange);
+  color: var(--fp-orange);
+}
+
+.fp-filter-btn.is-active {
+  background-color: var(--fp-orange);
+  border-color: var(--fp-orange);
+  color: #fff;
+}
+
+/* Search */
+.fp-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--fp-bg);
+  border: 1.5px solid var(--fp-grey);
+  border-radius: 30px;
+  padding: 8px 16px;
+  min-width: 220px;
+  transition: border-color 0.2s ease;
+}
+
+.fp-search-wrap:focus-within {
+  border-color: var(--fp-orange);
+}
+
+.fp-search-wrap i {
+  color: var(--fp-grey-mid);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.fp-search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--fp-black);
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.88rem;
+  width: 100%;
+}
+
+.fp-search-input::placeholder {
+  color: var(--fp-grey-mid);
+}
+
+/* ── CARDS GRID ── */
+.fp-grid-section {
+  background-color: var(--fp-bg);
+  padding: 64px 40px;
+  min-height: 300px;
+}
+
+.fp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 48px 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── FIGHTER CARD — borderless, circle-centered ── */
+.fp-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  transition: transform 0.25s ease;
+}
+
+.fp-card:hover {
+  transform: translateY(-6px);
+}
+
+.fp-card-avatar-wrap {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.fp-card-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid var(--fp-orange);
+  display: block;
+  background-color: var(--fp-grey);
+  transition: box-shadow 0.25s ease;
+}
+
+.fp-card:hover .fp-card-avatar {
+  box-shadow: 0 8px 28px rgba(247, 105, 2, 0.25);
+}
+
+/* Category badge — bottom-right of circle */
+.fp-card-badge {
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+.fp-badge--pro {
+  background: var(--fp-orange);
+  color: #fff;
+}
+.fp-badge--am {
+  background: #1a5faa;
+  color: #fff;
+}
+.fp-badge--youth {
+  background: #1a7a3c;
+  color: #fff;
+}
+
+/* Name */
+.fp-card-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--fp-black);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+/* Record */
+.fp-card-record {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.fp-record-win {
+  color: var(--fp-win);
+}
+.fp-record-loss {
+  color: var(--fp-loss);
+}
+.fp-record-draw {
+  color: var(--fp-draw);
+}
+.fp-record-sep {
+  color: var(--fp-grey-mid);
+}
+
+/* Weight class */
+.fp-card-weight {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.78rem;
+  color: var(--fp-grey-mid);
+  margin: 0;
+}
+
+/* Details button */
+.fp-details-btn {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 24px;
+  border-radius: 30px;
+  border: 1.5px solid var(--fp-orange);
+  background: transparent;
+  color: var(--fp-orange);
+  cursor: pointer;
+  margin-top: 4px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.fp-details-btn:hover {
+  background-color: var(--fp-orange);
+  color: #fff;
+}
+
+/* Ensure hidden attribute works even with display:flex on cards */
+.fp-card[hidden] {
+  display: none !important;
+}
+
+/* No results */
+.fp-no-results {
+  text-align: center;
+  color: var(--fp-grey-mid);
+  font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+/* ── UPCOMING FIGHTS — dark stripe for contrast ── */
+.fp-upcoming {
+  background-color: var(--fp-black);
+  padding: 72px 40px;
+}
+
+.fp-upcoming-eyebrow {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--fp-orange);
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.fp-upcoming-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.fp-fights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Fight card — white on dark bg for pop */
+.fp-fight-card {
+  background-color: #1c1c1c;
+  border-radius: 4px;
+  padding: 24px 20px;
+  border-top: 3px solid var(--fp-orange);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.2s ease;
+}
+
+.fp-fight-card:hover {
+  transform: translateY(-4px);
+}
+
+.fp-fight-event-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0 0 4px;
+}
+
+.fp-fight-date {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fp-orange);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fp-fight-matchup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.fp-fight-corner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.fp-fight-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.fp-fight-corner--red .fp-fight-avatar {
+  background-color: #7a0000;
+  border: 2px solid #c0392b;
+}
+.fp-fight-corner--blue .fp-fight-avatar {
+  background-color: #0a3060;
+  border: 2px solid #2980b9;
+}
+
+.fp-fight-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+.fp-fight-vs {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--fp-orange);
+  flex-shrink: 0;
+}
+
+.fp-fight-detail {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.82rem;
+  color: #888;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fp-fight-detail i {
+  color: var(--fp-orange);
+  font-size: 0.75rem;
+}
+
+.fp-fight-ticket-btn {
+  display: block;
+  text-align: center;
+  background: transparent;
+  border: 1.5px solid var(--fp-orange);
+  color: var(--fp-orange);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 4px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.fp-fight-ticket-btn:hover {
+  background-color: var(--fp-orange);
+  color: #fff;
+}
+
+/* ── CTA BANNER ── */
+.fp-cta-banner {
+  background-color: var(--fp-orange);
+  padding: 64px 40px;
+  text-align: center;
+}
+
+.fp-cta-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.fp-cta-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 28px;
+}
+
+.fp-cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--fp-orange);
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 40px;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.fp-cta-btn:hover {
+  background: transparent;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════════
+   MODAL — stays dark for contrast + readability
+═══════════════════════════════════════════ */
+.fp-modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.fp-modal-backdrop.is-open {
+  display: flex;
+}
+
+.fp-modal {
+  background-color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  border-top: 4px solid var(--fp-orange);
+  animation: fpModalIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes fpModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fp-modal-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  margin: 12px 12px 0 0;
+  background: var(--fp-grey);
+  border: none;
+  color: var(--fp-black);
+  font-size: 1.4rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  line-height: 1;
+}
+
+.fp-modal-close:hover {
+  background-color: var(--fp-orange);
+  color: #fff;
+}
+
+.fp-modal-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--fp-grey);
+  clear: both;
+}
+
+.fp-modal-avatar-wrap {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--fp-orange);
+  background: var(--fp-grey);
+}
+
+.fp-modal-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.fp-modal-badge {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.fp-modal-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--fp-black);
+  text-transform: uppercase;
+  margin: 0 0 4px;
+}
+
+.fp-modal-weight {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.82rem;
+  color: var(--fp-grey-mid);
+  margin: 0;
+}
+
+/* Stats bar */
+.fp-modal-stats {
+  display: flex;
+  border-bottom: 1px solid var(--fp-grey);
+  background-color: var(--fp-bg);
+}
+
+.fp-modal-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px;
+  border-right: 1px solid var(--fp-grey);
+  gap: 3px;
+}
+
+.fp-modal-stat:last-child {
+  border-right: none;
+}
+
+.fp-modal-stat-value {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--fp-orange);
+}
+
+.fp-modal-stat-value.win {
+  color: var(--fp-win);
+}
+.fp-modal-stat-value.loss {
+  color: var(--fp-loss);
+}
+.fp-modal-stat-value.draw {
+  color: var(--fp-draw);
+}
+
+.fp-modal-stat-label {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fp-grey-mid);
+}
+
+/* Body */
+.fp-modal-body {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fp-modal-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fp-modal-section-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fp-orange);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.fp-modal-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: #444;
+  margin: 0;
+}
+
+/* Info grid */
+.fp-modal-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  background: var(--fp-bg);
+  border-radius: 4px;
+  padding: 16px;
+  border: 1px solid var(--fp-grey);
+}
+
+.fp-modal-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fp-modal-info-label {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fp-grey-mid);
+}
+
+.fp-modal-info-value {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--fp-black);
+}
+
+/* Socials */
+.fp-modal-socials {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.fp-modal-socials a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--fp-grey-mid);
+  text-decoration: none;
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.fp-modal-socials a:hover {
+  color: var(--fp-orange);
+}
+.fp-modal-socials a i {
+  font-size: 1.1rem;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .fp-controls {
+    padding: 14px 20px;
+  }
+  .fp-grid-section {
+    padding: 48px 24px;
+  }
+  .fp-upcoming {
+    padding: 48px 24px;
+  }
+  .fp-cta-banner {
+    padding: 48px 24px;
+  }
+
+  .fp-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 36px 16px;
+  }
+  .fp-card-avatar,
+  .fp-card-avatar-wrap {
+    width: 110px;
+    height: 110px;
+  }
+
+  .fp-modal-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .fp-modal-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .fp-modal-body {
+    padding: 16px 18px;
+  }
+  .fp-modal-footer {
+    padding: 14px 18px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fp-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 14px;
+  }
+  .fp-search-wrap {
+    min-width: 150px;
+  }
+  .fp-modal-stats {
+    flex-wrap: wrap;
+  }
+  .fp-modal-stat {
+    flex: 1 0 33%;
+  }
+}

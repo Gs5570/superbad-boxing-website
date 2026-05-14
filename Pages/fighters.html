@@ -7,76 +7,260 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- icon link:https://cdnjs.com/libraries/font-awesome/6.7.2 | if everbroken use the link to replace-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
     <link
         href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
     <meta name="author" content="Galekwan Sango" />
 
-    <!-- The order of the styles matters: -->
-
     <!-- general style -->
     <link rel="stylesheet" href="../Styles/style.css" />
-
     <!-- responsive break points -->
     <link rel="stylesheet" href="../Styles/responsiveBreak.css" />
+    <!-- fighters page -->
+    <link rel="stylesheet" href="../Styles/Pages/fighters-page.css" />
 
-    <!-- carousel style -->
-    <link rel="stylesheet" href="../Styles/carousel.css" />
-
-    <!-- service section -->
-    <link rel="stylesheet" href="../Styles/services.css" />
-
-    <!-- Mission statement section -->
-    <link rel="stylesheet" href="../Styles/mission-statement.css" />
-    <!-- coaches section -->
-    <link rel="stylesheet" href="../Styles/coaches.css" />
-    <title>SuperBad</title>
+    <title>Fighters — SuperBad Boxing</title>
 </head>
 
 <body>
     <div class="body-container">
+
+        <!-- ── HEADER ── -->
         <div class="header-container">
-            <!-- Logo visible in header bar always -->
             <a href="../index.html"><img id="site-logo" src="../Media/logo.png" alt="site logo" /></a>
-
             <nav class="nav-bar-container">
-                <!-- Hidden checkbox — CSS-only toggle -->
                 <input class="side-menu" type="checkbox" id="side-menu" />
-
-                <!-- Hamburger / X — fixed top-right on mobile -->
                 <label class="hamb" for="side-menu">
                     <span class="hamb-line"></span>
                 </label>
-
-                <!-- Nav overlay -->
                 <ul class="nav-items-container">
-                    <!-- Logo shown inside the overlay on mobile -->
                     <a href="../index.html"><img class="overlay-logo" src="../Media/logo.png" alt="site logo" /></a>
-
                     <li class="nav-items"><a href="./about.html">About</a></li>
                     <li class="nav-items"><a href="./coaches.html">Coaches</a></li>
                     <li class="nav-items"><a href="./fighters.html">Fighters</a></li>
                     <li class="nav-items"><a href="./gallery.html">Gallery</a></li>
                     <li class="nav-items"><a href="./membership.html">Membership</a></li>
+                    <li class="nav-items"><a href="./events.html">Events</a></li>
                     <li class="nav-items"><a href="./program.html">Program</a></li>
                     <li class="nav-items"><a href="./about.html">Tribute</a></li>
+                    <li class="nav-items"><a href="./contact-us.html">Contact US</a></li>
                 </ul>
             </nav>
         </div>
+
         <div class="content-container">
 
+            <!-- ── HERO ── -->
+            <section class="fp-hero">
+                <div class="fp-hero-overlay"></div>
+                <div class="fp-hero-content">
+                    <p class="fp-eyebrow">SuperBad Boxing Gym</p>
+                    <h1 class="fp-hero-title">Our <span class="fp-accent">Fighters</span></h1>
+                    <p class="fp-hero-sub">Champions built in Detroit.</p>
+                </div>
+            </section>
+
+            <!-- ── CONTROLS: Filter + Search ── -->
+            <section class="fp-controls">
+                <div class="fp-filters" role="group" aria-label="Filter fighters by category">
+                    <button class="fp-filter-btn is-active" data-filter="all">All</button>
+                    <button class="fp-filter-btn" data-filter="professional">Professional</button>
+                    <button class="fp-filter-btn" data-filter="amateur">Amateur</button>
+                    <button class="fp-filter-btn" data-filter="youth">Youth</button>
+                </div>
+                <div class="fp-search-wrap">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input type="search" id="fpSearch" class="fp-search-input" placeholder="Search fighters…"
+                        aria-label="Search fighters" />
+                </div>
+            </section>
+
+            <!-- ── FIGHTER CARDS GRID ── -->
+            <section class="fp-grid-section">
+                <div class="fp-grid" id="fpGrid">
+
+                    <article class="fp-card" data-category="professional" data-fighter="tony">
+                        <div class="fp-card-avatar-wrap">
+                            <img src="../Media/logo.png" alt="Tony Harrison" class="fp-card-avatar" />
+                            <span class="fp-card-badge fp-badge--pro">Professional</span>
+                        </div>
+                        <h3 class="fp-card-name">Tony <span class="fp-accent">Harrison</span></h3>
+                        <div class="fp-card-record">
+                            <span class="fp-record-win">20</span>
+                            <span class="fp-record-sep">-</span>
+                            <span class="fp-record-loss">3</span>
+                            <span class="fp-record-sep">-</span>
+                            <span class="fp-record-draw">0</span>
+                        </div>
+                        <button class="fp-details-btn" data-fighter="tony">Details</button>
+                    </article>
+
+                    <article class="fp-card" data-category="professional" data-fighter="lj">
+                        <div class="fp-card-avatar-wrap">
+                            <img src="../Media/logo.png" alt="LJ Harrison" class="fp-card-avatar" />
+                            <span class="fp-card-badge fp-badge--pro">Professional</span>
+                        </div>
+                        <h3 class="fp-card-name">L.J. <span class="fp-accent">Harrison</span></h3>
+                        <div class="fp-card-record">
+                            <span class="fp-record-win">14</span>
+                            <span class="fp-record-sep">-</span>
+                            <span class="fp-record-loss">1</span>
+                            <span class="fp-record-sep">-</span>
+                            <span class="fp-record-draw">0</span>
+                        </div>
+                        <button class="fp-details-btn" data-fighter="lj">Details</button>
+                    </article>
+
+                    <article class="fp-card" data-category="amateur" data-fighter="marcus">
+                        <div class="fp-card-avatar-wrap">
+                            <img src="../Media/logo.png" alt="Marcus Webb" class="fp-card-avatar" />
+                            <span class="fp-card-badge fp-badge--am">Amateur</span>
+                        </div>
+                        <h3 class="fp-card-name">Marcus <span class="fp-accent">Webb</span></h3>
+                        <div class="fp-card-record">
+                            <span class="fp-record-win">8</span>
+                            <span class="fp-record-sep">-</span>
+                            <span class="fp-record-loss">2</span>
+                            <span class="fp-record-sep">-</span>
+                            <span class="fp-record-draw">1</span>
+                        </div>
+                        <button class="fp-details-btn" data-fighter="marcus">Details</button>
+                    </article>
+
+                    <article class="fp-card" data-category="amateur" data-fighter="diana">
+                        <div class="fp-card-avatar-wrap">
+                            <img src="../Media/logo.png" alt="Diana Cruz" class="fp-card-avatar" />
+                            <span class="fp-card-badge fp-badge--am">Amateur</span>
+                        </div>
+                        <h3 class="fp-card-name">Diana <span class="fp-accent">Cruz</span></h3>
+                        <div class="fp-card-record">
+                            <span class="fp-record-win">6</span>
+                            <span class="fp-record-sep">-</span>
+                            <span class="fp-record-loss">0</span>
+                            <span class="fp-record-sep">-</span>
+                            <span class="fp-record-draw">0</span>
+                        </div>
+                        <button class="fp-details-btn" data-fighter="diana">Details</button>
+                    </article>
+
+                    <article class="fp-card" data-category="youth" data-fighter="jaylen">
+                        <div class="fp-card-avatar-wrap">
+                            <img src="../Media/logo.png" alt="Jaylen Brooks" class="fp-card-avatar" />
+                            <span class="fp-card-badge fp-badge--youth">Youth</span>
+                        </div>
+                        <h3 class="fp-card-name">Jaylen <span class="fp-accent">Brooks</span></h3>
+                        <div class="fp-card-record">
+                            <span class="fp-record-win">4</span>
+                            <span class="fp-record-sep">-</span>
+                            <span class="fp-record-loss">1</span>
+                            <span class="fp-record-sep">-</span>
+                            <span class="fp-record-draw">0</span>
+                        </div>
+                        <button class="fp-details-btn" data-fighter="jaylen">Details</button>
+                    </article>
+
+                    <article class="fp-card" data-category="youth" data-fighter="keisha">
+                        <div class="fp-card-avatar-wrap">
+                            <img src="../Media/logo.png" alt="Keisha Moore" class="fp-card-avatar" />
+                            <span class="fp-card-badge fp-badge--youth">Youth</span>
+                        </div>
+                        <h3 class="fp-card-name">Keisha <span class="fp-accent">Moore</span></h3>
+                        <div class="fp-card-record">
+                            <span class="fp-record-win">3</span>
+                            <span class="fp-record-sep">-</span>
+                            <span class="fp-record-loss">0</span>
+                            <span class="fp-record-sep">-</span>
+                            <span class="fp-record-draw">0</span>
+                        </div>
+                        <button class="fp-details-btn" data-fighter="keisha">Details</button>
+                    </article>
+
+                </div>
+                <p class="fp-no-results" id="fpNoResults" hidden>No fighters match your search.</p>
+            </section>
+
+            <!-- ── UPCOMING FIGHTS ── -->
+            <section class="fp-upcoming">
+                <p class="fp-upcoming-eyebrow">On the Card</p>
+                <h2 class="fp-upcoming-title">Upcoming <span class="fp-accent">Events</span></h2>
+                <div class="fp-fights-grid">
+
+                    <div class="fp-fight-card">
+                        <p class="fp-fight-event-name">SuperBad Fight Night Vol. 1</p>
+                        <p class="fp-fight-detail"><i class="fa-solid fa-calendar-days"></i> Jun 14, 2025 · 7:00 PM</p>
+                        <p class="fp-fight-detail"><i class="fa-solid fa-location-dot"></i> Detroit, MI</p>
+                        <a href="./events.html" class="fp-fight-ticket-btn">View Event</a>
+                    </div>
+
+                    <div class="fp-fight-card">
+                        <p class="fp-fight-event-name">SuperBad Fight Night Vol. 2</p>
+                        <p class="fp-fight-detail"><i class="fa-solid fa-calendar-days"></i> Jul 5, 2025 · 7:00 PM</p>
+                        <p class="fp-fight-detail"><i class="fa-solid fa-location-dot"></i> Detroit, MI</p>
+                        <a href="./events.html" class="fp-fight-ticket-btn">View Event</a>
+                    </div>
+
+                    <div class="fp-fight-card">
+                        <p class="fp-fight-event-name">SuperBad Youth Showcase</p>
+                        <p class="fp-fight-detail"><i class="fa-solid fa-calendar-days"></i> Aug 22, 2025 · 5:00 PM</p>
+                        <p class="fp-fight-detail"><i class="fa-solid fa-location-dot"></i> Detroit, MI</p>
+                        <a href="./events.html" class="fp-fight-ticket-btn">View Event</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ── CTA BANNER ── -->
+            <section class="fp-cta-banner">
+                <h2 class="fp-cta-title">Train Alongside Champions</h2>
+                <p class="fp-cta-sub">Join SuperBad Boxing Gym and start your journey today.</p>
+                <a href="./contact-us.html" class="fp-cta-btn">Join the Gym</a>
+            </section>
+
+        </div><!-- end content-container -->
+
+        <!-- ── FOOTER ── -->
+        <footer class="footer-container">
+            <p>&copy; 2024 SuperBad Boxing Gym. Detroit, MI.</p>
+        </footer>
+
+    </div><!-- end body-container -->
+
+    <!-- ── FIGHTER PROFILE MODAL ── -->
+    <div class="fp-modal-backdrop" id="fighterModal" role="dialog" aria-modal="true" aria-labelledby="modalFighterName">
+        <div class="fp-modal">
+            <button class="fp-modal-close" id="fpModalClose" aria-label="Close profile">&times;</button>
+            <div class="fp-modal-header">
+                <div class="fp-modal-avatar-wrap">
+                    <img src="" alt="" class="fp-modal-avatar" id="fpModalImg" />
+                </div>
+                <div class="fp-modal-header-info">
+                    <span class="fp-modal-badge" id="fpModalBadge"></span>
+                    <h2 class="fp-modal-name" id="modalFighterName"></h2>
+                    <p class="fp-modal-weight" id="fpModalWeight"></p>
+                </div>
+            </div>
+            <div class="fp-modal-stats" id="fpModalStats"></div>
+            <div class="fp-modal-body">
+                <div class="fp-modal-section">
+                    <h4 class="fp-modal-section-title"><i class="fa-solid fa-user" aria-hidden="true"></i> Bio</h4>
+                    <p class="fp-modal-text" id="fpModalBio"></p>
+                </div>
+                <div class="fp-modal-info-grid" id="fpModalInfoGrid"></div>
+                <div class="fp-modal-section">
+                    <h4 class="fp-modal-section-title"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+                        Connect</h4>
+                    <div class="fp-modal-socials" id="fpModalSocials"></div>
+                </div>
+            </div>
+
         </div>
+    </div>
 
-        <script src="../scripts/index.js"></script>
-        <script src="../scripts/coaches.js"></script>
-
+    <script src="../scripts/index.js"></script>
+    <script src="/scripts/pages/fighters-page.js"></script>
 </body>
 
 </html>
