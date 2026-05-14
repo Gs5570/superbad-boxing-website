@@ -7,59 +7,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- icon link:https://cdnjs.com/libraries/font-awesome/6.7.2 | if everbroken use the link to replace-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
     <link
         href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
     <meta name="author" content="Galekwan Sango" />
-
-    <!-- The order of the styles matters: -->
-
-    <!-- general style -->
     <link rel="stylesheet" href="../Styles/style.css" />
-
-    <!-- responsive break points -->
     <link rel="stylesheet" href="../Styles/responsiveBreak.css" />
-
-    <!-- carousel style -->
-    <link rel="stylesheet" href="../Styles/carousel.css" />
-
-    <!-- service section -->
-    <link rel="stylesheet" href="../Styles/services.css" />
-
-    <!-- Mission statement section -->
-    <link rel="stylesheet" href="../Styles/mission-statement.css" />
-    <!-- coaches section -->
-    <link rel="stylesheet" href="../Styles/coaches.css" />
-    <title>SuperBad</title>
+    <link rel="stylesheet" href="../Styles/Pages/membership-page.css" />
+    <title>Membership — SuperBad Boxing</title>
 </head>
 
 <body>
     <div class="body-container">
+
+        <!-- ── HEADER ── -->
         <div class="header-container">
-            <!-- Logo visible in header bar always -->
             <a href="../index.html"><img id="site-logo" src="../Media/logo.png" alt="site logo" /></a>
-
             <nav class="nav-bar-container">
-                <!-- Hidden checkbox — CSS-only toggle -->
                 <input class="side-menu" type="checkbox" id="side-menu" />
-
-                <!-- Hamburger / X — fixed top-right on mobile -->
-                <label class="hamb" for="side-menu">
-                    <span class="hamb-line"></span>
-                </label>
-
-                <!-- Nav overlay -->
+                <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
                 <ul class="nav-items-container">
-                    <!-- Logo shown inside the overlay on mobile -->
                     <a href="../index.html"><img class="overlay-logo" src="../Media/logo.png" alt="site logo" /></a>
-
                     <li class="nav-items"><a href="./about.html">About</a></li>
                     <li class="nav-items"><a href="./coaches.html">Coaches</a></li>
                     <li class="nav-items"><a href="./fighters.html">Fighters</a></li>
@@ -72,13 +43,129 @@
                 </ul>
             </nav>
         </div>
+
         <div class="content-container">
 
-        </div>
+            <!-- ── PAGE HEADER ── -->
+            <section class="mp-page-header">
+                <p class="mp-eyebrow">SuperBad Boxing Gym</p>
+                <h1 class="mp-page-title">Join the <span class="mp-accent">SuperBad</span> Family</h1>
+                <p class="mp-page-sub">
+                    Become part of a gym built on discipline, respect, and championship mentality.
+                    Whether you are a beginner, athlete, fitness enthusiast, or competitive fighter —
+                    we have a program designed to help you grow stronger physically and mentally.
+                </p>
+            </section>
 
-        <script src="../scripts/index.js"></script>
-        <script src="../scripts/coaches.js"></script>
+            <!-- ── MEMBERSHIP CARDS ── -->
+            <section class="mp-cards-section">
+                <div class="mp-cards-grid">
 
+                    <!-- Open Gym -->
+                    <article class="mp-card">
+                        <div class="mp-card-icon">
+                            <i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="mp-card-title">Open Gym Membership</h2>
+                        <ul class="mp-card-benefits">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Access to all boxing classes</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Open mat & bag training time</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Full equipment access</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Positive motivating community</li>
+                        </ul>
+                        <a href="./contact-us.html" class="mp-card-btn">Get Started</a>
+                    </article>
+
+                    <!-- Adult -->
+                    <article class="mp-card">
+                        <div class="mp-card-icon">
+                            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="mp-card-title">Adult Membership</h2>
+                        <ul class="mp-card-benefits">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Boxing &amp; conditioning classes
+                            </li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Experienced coaching staff</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Youth &amp; adult programs</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Personalized growth &amp;
+                                development</li>
+                        </ul>
+                        <a href="./contact-us.html" class="mp-card-btn">Get Started</a>
+                    </article>
+
+                    <!-- Fighter Development -->
+                    <article class="mp-card">
+                        <div class="mp-card-icon">
+                            <i class="fa-solid fa-hand-fist" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="mp-card-title">Fighter Development Program</h2>
+                        <ul class="mp-card-benefits">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Amateur &amp; pro fight preparation
+                            </li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Sparring &amp; competitive training
+                            </li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Competitive training environment
+                            </li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Personal mentorship</li>
+                        </ul>
+                        <a href="./contact-us.html" class="mp-card-btn">Get Started</a>
+                    </article>
+
+                    <!-- Private Training -->
+                    <article class="mp-card">
+                        <div class="mp-card-icon">
+                            <i class="fa-solid fa-user-check" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="mp-card-title">Private Training Package</h2>
+                        <ul class="mp-card-benefits">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> One-on-one coaching sessions</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Fully tailored programming</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Flexible scheduling</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Goal-specific training plans</li>
+                        </ul>
+                        <a href="./contact-us.html" class="mp-card-btn">Get Started</a>
+                    </article>
+
+                    <!-- Strength & Conditioning -->
+                    <article class="mp-card">
+                        <div class="mp-card-icon">
+                            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="mp-card-title">Strength &amp; Conditioning</h2>
+                        <ul class="mp-card-benefits">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Power &amp; endurance training</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Sport-specific programming</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Injury prevention focus</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> NSCA-certified coaching</li>
+                        </ul>
+                        <a href="./contact-us.html" class="mp-card-btn">Get Started</a>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- ── PULLQUOTE / CTA ── -->
+            <section class="mp-pullquote">
+                <blockquote class="mp-quote">
+                    "Train with purpose. Build confidence. Become stronger every day."
+                </blockquote>
+                <p class="mp-quote-sub">
+                    Step into an environment where hard work creates results. At SuperBad Boxing Gym,
+                    every member is treated like family and pushed to become the best version of themselves.
+                </p>
+                <a href="./contact-us.html" class="mp-pullquote-btn">Contact Us</a>
+            </section>
+
+        </div><!-- end content-container -->
+
+        <!-- ── FOOTER ── -->
+        <footer class="footer-container">
+            <p>&copy; 2024 SuperBad Boxing Gym. Detroit, MI.</p>
+        </footer>
+
+    </div><!-- end body-container -->
+
+    <script src="../scripts/index.js"></script>
 </body>
 
 </html>

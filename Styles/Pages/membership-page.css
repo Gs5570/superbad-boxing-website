@@ -1,0 +1,295 @@
+/* ═══════════════════════════════════════════
+   MEMBERSHIP PAGE — membership.css
+   White background · orange accents · black text
+═══════════════════════════════════════════ */
+
+:root {
+  --mp-orange: rgb(247, 105, 2);
+  --mp-orange-dark: rgb(200, 82, 0);
+  --mp-orange-light: rgba(247, 105, 2, 0.08);
+  --mp-black: #111;
+  --mp-dark: #1a1a1a;
+  --mp-grey: #e5e5e5;
+  --mp-grey-mid: #777;
+  --mp-white: #fff;
+  --mp-bg: #f7f7f7;
+}
+
+/* ── PAGE HEADER ── */
+.mp-page-header {
+  background-color: var(--mp-white);
+  padding: 64px 40px 48px;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.mp-eyebrow {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mp-orange);
+  margin: 0 0 12px;
+}
+
+.mp-page-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  color: var(--mp-black);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+.mp-accent {
+  color: var(--mp-orange);
+}
+
+.mp-page-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--mp-grey-mid);
+  margin: 0;
+}
+
+/* ── MEMBERSHIP CARDS ── */
+.mp-cards-section {
+  background-color: var(--mp-bg);
+  padding: 64px 40px;
+}
+
+.mp-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* last two cards center themselves when they wrap */
+.mp-cards-grid .mp-card:nth-child(4) {
+  grid-column: 1 / 2;
+}
+.mp-cards-grid .mp-card:nth-child(5) {
+  grid-column: 2 / 3;
+}
+
+.mp-card {
+  background-color: var(--mp-white);
+  border-radius: 4px;
+  border-top: 4px solid var(--mp-orange);
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.mp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.mp-card-icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--mp-orange-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mp-card-icon i {
+  color: var(--mp-orange);
+  font-size: 1.2rem;
+}
+
+.mp-card-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--mp-black);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.mp-card-benefits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.mp-card-benefits li {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mp-card-benefits li i {
+  color: var(--mp-orange);
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.mp-card-btn {
+  display: block;
+  text-align: center;
+  background: transparent;
+  border: 1.5px solid var(--mp-orange);
+  color: var(--mp-orange);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 11px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: auto;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.mp-card-btn:hover {
+  background-color: var(--mp-orange);
+  color: var(--mp-white);
+}
+
+/* ── PULLQUOTE / CTA ── */
+.mp-pullquote {
+  background-color: var(--mp-dark);
+  padding: 72px 40px;
+  text-align: center;
+}
+
+.mp-quote {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--mp-white);
+  margin: 0 auto 20px;
+  max-width: 700px;
+  border: none;
+  padding: 0;
+  position: relative;
+}
+
+.mp-quote::before {
+  content: '"';
+  font-size: 5rem;
+  color: var(--mp-orange);
+  opacity: 0.3;
+  line-height: 0;
+  position: absolute;
+  top: 24px;
+  left: -16px;
+  font-family: Georgia, serif;
+}
+
+.mp-quote-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+.mp-pullquote-btn {
+  display: inline-block;
+  background-color: var(--mp-orange);
+  color: var(--mp-white);
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.88rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 40px;
+  border-radius: 30px;
+  border: 2px solid var(--mp-orange);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.mp-pullquote-btn:hover {
+  background-color: transparent;
+  color: var(--mp-orange);
+  transform: translateY(-2px);
+}
+
+/* ── FOOTER ── */
+.footer-container {
+  background-color: var(--mp-black);
+  padding: 24px 40px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.35);
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .mp-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mp-cards-grid .mp-card:nth-child(4),
+  .mp-cards-grid .mp-card:nth-child(5) {
+    grid-column: auto;
+  }
+  /* center the last card if it's alone */
+  .mp-cards-grid .mp-card:nth-child(5):last-child {
+    grid-column: 1 / -1;
+    max-width: 380px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .mp-page-header {
+    padding: 48px 24px 36px;
+  }
+  .mp-cards-section {
+    padding: 48px 24px;
+  }
+  .mp-pullquote {
+    padding: 52px 24px;
+  }
+
+  .mp-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .mp-cards-grid .mp-card:nth-child(5):last-child {
+    max-width: 100%;
+  }
+  .mp-quote::before {
+    display: none;
+  }
+}
