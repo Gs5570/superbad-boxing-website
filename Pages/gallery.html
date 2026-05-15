@@ -7,59 +7,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- icon link:https://cdnjs.com/libraries/font-awesome/6.7.2 | if everbroken use the link to replace-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
     <link
         href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
     <meta name="author" content="Galekwan Sango" />
-
-    <!-- The order of the styles matters: -->
-
-    <!-- general style -->
     <link rel="stylesheet" href="../Styles/style.css" />
-
-    <!-- responsive break points -->
     <link rel="stylesheet" href="../Styles/responsiveBreak.css" />
-
-    <!-- carousel style -->
-    <link rel="stylesheet" href="../Styles/carousel.css" />
-
-    <!-- service section -->
-    <link rel="stylesheet" href="../Styles/services.css" />
-
-    <!-- Mission statement section -->
-    <link rel="stylesheet" href="../Styles/mission-statement.css" />
-    <!-- coaches section -->
-    <link rel="stylesheet" href="../Styles/coaches.css" />
-    <title>Gallery</title>
+    <link rel="stylesheet" href="../Styles/Pages/gallery-page.css" />
+    <title>Gallery — SuperBad Boxing</title>
 </head>
 
 <body>
     <div class="body-container">
+
+        <!-- ── HEADER ── -->
         <div class="header-container">
-            <!-- Logo visible in header bar always -->
             <a href="../index.html"><img id="site-logo" src="../Media/logo.png" alt="site logo" /></a>
-
             <nav class="nav-bar-container">
-                <!-- Hidden checkbox — CSS-only toggle -->
                 <input class="side-menu" type="checkbox" id="side-menu" />
-
-                <!-- Hamburger / X — fixed top-right on mobile -->
-                <label class="hamb" for="side-menu">
-                    <span class="hamb-line"></span>
-                </label>
-
-                <!-- Nav overlay -->
+                <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
                 <ul class="nav-items-container">
-                    <!-- Logo shown inside the overlay on mobile -->
                     <a href="../index.html"><img class="overlay-logo" src="../Media/logo.png" alt="site logo" /></a>
-
                     <li class="nav-items"><a href="./about.html">About</a></li>
                     <li class="nav-items"><a href="./coaches.html">Coaches</a></li>
                     <li class="nav-items"><a href="./fighters.html">Fighters</a></li>
@@ -72,13 +43,189 @@
                 </ul>
             </nav>
         </div>
+
         <div class="content-container">
 
+            <!-- ── PAGE HEADER ── -->
+            <section class="gp-header">
+                <p class="gp-eyebrow">SuperBad Boxing Gym</p>
+                <h1 class="gp-title">Inside <span class="gp-accent">SuperBad</span></h1>
+                <p class="gp-sub">
+                    Take a look inside the energy, discipline, and culture that define SuperBad Boxing Gym.
+                    From intense training sessions and sparring to youth programs and championship preparation,
+                    our gallery showcases the hard work and passion that fuel our community every day.
+                </p>
+            </section>
+
+            <!-- ── FILTER BAR ── -->
+            <div class="gp-filter-bar" id="gpFilterBar">
+                <div class="gp-filters">
+                    <button class="gp-filter-btn is-active" data-filter="all">All</button>
+                    <button class="gp-filter-btn" data-filter="training">Training Sessions</button>
+                    <button class="gp-filter-btn" data-filter="sparring">Sparring &amp; Fight Camp</button>
+                    <button class="gp-filter-btn" data-filter="youth">Youth Boxing</button>
+                    <button class="gp-filter-btn" data-filter="community">Community Events</button>
+                    <button class="gp-filter-btn" data-filter="fighters">Fighters</button>
+                    <button class="gp-filter-btn" data-filter="strength">Strength &amp; Conditioning</button>
+                    <button class="gp-filter-btn" data-filter="culture">Gym Culture</button>
+                    <button class="gp-filter-btn" data-filter="championship">Championship</button>
+                </div>
+            </div>
+
+            <!-- ── PHOTO GRID ── -->
+            <section class="gp-grid-section">
+                <div class="gp-grid" id="gpGrid">
+
+                    <!--
+                      Each .gp-item has:
+                        data-category  — matches filter button data-filter
+                        data-caption   — shown in lightbox
+                      Replace src with your real photos.
+                      The class "gp-wide" makes a photo span 2 columns.
+                    -->
+
+                    <div class="gp-item gp-wide" data-category="training"
+                        data-caption="Morning training session at SuperBad Boxing Gym">
+                        <img src="../Media/sparring.webp" alt="Training session" class="gp-img" loading="lazy" />
+                        <div class="gp-item-overlay">
+                            <span class="gp-item-label">Training Sessions</span>
+                        </div>
+                    </div>
+
+                    <div class="gp-item" data-category="sparring" data-caption="Sparring session in the ring">
+                        <img src="../Media/dad-coaching.webp" alt="Sparring" class="gp-img" loading="lazy" />
+                        <div class="gp-item-overlay">
+                            <span class="gp-item-label">Sparring &amp; Fight Camp</span>
+                        </div>
+                    </div>
+
+                    <div class="gp-item" data-category="youth" data-caption="Youth boxing program in action">
+                        <img src="../Media/kid-2.webp" alt="Youth boxing" class="gp-img" loading="lazy" />
+                        <div class="gp-item-overlay">
+                            <span class="gp-item-label">Youth Boxing</span>
+                        </div>
+                    </div>
+
+                    <div class="gp-item" data-category="fighters" data-caption="Fighter profile — SuperBad Boxing">
+                        <img src="../Media/superbad.webp" alt="SuperBad fighter" class="gp-img" loading="lazy" />
+                        <div class="gp-item-overlay">
+                            <span class="gp-item-label">Fighters</span>
+                        </div>
+                    </div>
+
+                    <div class="gp-item" data-category="culture" data-caption="Gym culture at SuperBad Boxing">
+                        <img src="../Media/familly-carousel.webp" alt="Gym culture" class="gp-img" loading="lazy" />
+                        <div class="gp-item-overlay">
+                            <span class="gp-item-label">Gym Culture</span>
+                        </div>
+                    </div>
+
+                    <div class="gp-item gp-wide" data-category="sparring"
+                        data-caption="Fight camp preparation — SuperBad fighters">
+                        <img src="../Media/sparring.webp" alt="Fight camp" class="gp-img" loading="lazy" />
+                        <div class="gp-item-overlay">
+                            <span class="gp-item-label">Sparring &amp; Fight Camp</span>
+                        </div>
+                    </div>
+
+                    <div class="gp-item" data-category="training" data-caption="Bag work during morning session">
+                        <img src="../Media/dad-coaching.webp" alt="Bag work" class="gp-img" loading="lazy" />
+                        <div class="gp-item-overlay">
+                            <span class="gp-item-label">Training Sessions</span>
+                        </div>
+                    </div>
+
+                    <div class="gp-item" data-category="championship"
+                        data-caption="Championship preparation at SuperBad">
+                        <img src="../Media/superbad.webp" alt="Championship moments" class="gp-img" loading="lazy" />
+                        <div class="gp-item-overlay">
+                            <span class="gp-item-label">Championship</span>
+                        </div>
+                    </div>
+
+                    <div class="gp-item" data-category="community"
+                        data-caption="Community event hosted by SuperBad Boxing Gym">
+                        <img src="../Media/familly-carousel.webp" alt="Community event" class="gp-img" loading="lazy" />
+                        <div class="gp-item-overlay">
+                            <span class="gp-item-label">Community Events</span>
+                        </div>
+                    </div>
+
+                    <div class="gp-item" data-category="strength" data-caption="Strength and conditioning training">
+                        <img src="../Media/dad-coaching.webp" alt="Strength training" class="gp-img" loading="lazy" />
+                        <div class="gp-item-overlay">
+                            <span class="gp-item-label">Strength &amp; Conditioning</span>
+                        </div>
+                    </div>
+
+                    <div class="gp-item gp-wide" data-category="youth"
+                        data-caption="Youth program — building the next generation">
+                        <img src="../Media/kid-2.webp" alt="Youth program" class="gp-img" loading="lazy" />
+                        <div class="gp-item-overlay">
+                            <span class="gp-item-label">Youth Boxing</span>
+                        </div>
+                    </div>
+
+                    <div class="gp-item" data-category="culture"
+                        data-caption="The SuperBad family — Detroit boxing community">
+                        <img src="../Media/familly-carousel.webp" alt="SuperBad family" class="gp-img" loading="lazy" />
+                        <div class="gp-item-overlay">
+                            <span class="gp-item-label">Gym Culture</span>
+                        </div>
+                    </div>
+
+                    <!-- Add more .gp-item blocks here as you get real photos -->
+
+                </div>
+
+                <!-- No results -->
+                <p class="gp-no-results" id="gpNoResults" hidden>No photos in this category yet.</p>
+
+                <!-- Load more -->
+                <div class="gp-load-more-wrap" id="gpLoadMoreWrap">
+                    <button class="gp-load-more-btn" id="gpLoadMore">
+                        <i class="fa-solid fa-images" aria-hidden="true"></i> Load More Photos
+                    </button>
+                </div>
+            </section>
+
+            <!-- ── CTA BANNER ── -->
+            <section class="gp-cta-banner">
+                <h2 class="gp-cta-title">Become Part of This Community</h2>
+                <p class="gp-cta-sub">Train hard. Stay disciplined. Join the SuperBad family today.</p>
+                <a href="./membership.html" class="gp-cta-btn">View Membership Options</a>
+            </section>
+
+        </div><!-- end content-container -->
+
+        <!-- ── FOOTER ── -->
+        <footer class="footer-container">
+            <p>&copy; 2024 SuperBad Boxing Gym. Detroit, MI.</p>
+        </footer>
+
+    </div><!-- end body-container -->
+
+    <!-- ── LIGHTBOX ── -->
+    <div class="gp-lightbox" id="gpLightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+        <button class="gp-lb-close" id="gpLbClose" aria-label="Close photo viewer">&times;</button>
+        <button class="gp-lb-arrow gp-lb-prev" id="gpLbPrev" aria-label="Previous photo">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="gp-lb-arrow gp-lb-next" id="gpLbNext" aria-label="Next photo">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="gp-lb-content">
+            <img src="" alt="" class="gp-lb-img" id="gpLbImg" />
+            <div class="gp-lb-info">
+                <span class="gp-lb-category" id="gpLbCategory"></span>
+                <p class="gp-lb-caption" id="gpLbCaption"></p>
+            </div>
         </div>
+        <span class="gp-lb-counter" id="gpLbCounter"></span>
+    </div>
 
-        <script src="../scripts/index.js"></script>
-        <script src="../scripts/coaches.js"></script>
-
+    <script src="/Styles/style.css"></script>
+    <script src="/scripts/pages/gallery-page.js"></script>
 </body>
 
 </html>
