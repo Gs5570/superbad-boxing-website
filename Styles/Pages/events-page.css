@@ -1,0 +1,761 @@
+/* ═══════════════════════════════════════════
+   EVENTS PAGE — events.css
+   Dark header + cards · white host section
+   Orange accents throughout
+═══════════════════════════════════════════ */
+
+:root {
+  --ep-orange: rgb(247, 105, 2);
+  --ep-orange-dark: rgb(200, 82, 0);
+  --ep-orange-light: rgba(247, 105, 2, 0.1);
+  --ep-black: #0d0d0d;
+  --ep-dark: #1a1a1a;
+  --ep-grey: #2e2e2e;
+  --ep-grey-mid: #888;
+  --ep-white: #fff;
+  --ep-bg: #f7f7f7;
+}
+
+.content-container {
+  background-color: var(--ep-dark);
+}
+
+/* ── PAGE HEADER ── */
+.ep-header {
+  background-color: var(--ep-black);
+  padding: 64px 40px 52px;
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.ep-eyebrow {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ep-orange);
+  margin: 0 0 12px;
+}
+
+.ep-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--ep-white);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+.ep-accent {
+  color: var(--ep-orange);
+}
+
+.ep-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+
+/* ── SHARED SECTION LABELS ── */
+.ep-section-eyebrow {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ep-orange);
+  margin: 0 0 10px;
+}
+
+.ep-section-eyebrow--light {
+  color: rgba(247, 105, 2, 0.8);
+}
+
+.ep-section-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  color: var(--ep-black);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0 0 24px;
+}
+
+.ep-section-title--white {
+  color: var(--ep-white);
+}
+
+/* ═══════════════════════════════════════════
+   FEATURED EVENT
+═══════════════════════════════════════════ */
+.ep-featured-section {
+  background-color: var(--ep-black);
+  padding: 0 40px 64px;
+}
+
+.ep-featured-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: var(--ep-dark);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-left: 4px solid var(--ep-orange);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+}
+
+/* Top accent bar is the left border — no extra element needed */
+.ep-featured-accent-bar {
+  display: none;
+}
+
+.ep-featured-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.ep-featured-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.ep-featured-card:hover .ep-featured-img {
+  transform: scale(1.03);
+}
+
+.ep-featured-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: var(--ep-orange);
+  color: var(--ep-white);
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ep-featured-body {
+  padding: 32px 36px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Meta row */
+.ep-featured-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.ep-meta-item {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ep-meta-item i {
+  color: var(--ep-orange);
+  font-size: 0.78rem;
+}
+
+.ep-featured-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: var(--ep-white);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.ep-featured-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  max-width: 680px;
+}
+
+/* Event highlights chips */
+.ep-featured-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ep-chip {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 5px 12px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ep-chip i {
+  color: var(--ep-orange);
+  font-size: 0.7rem;
+}
+
+/* Footer row */
+.ep-featured-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 8px;
+  border-top: 1px solid var(--ep-grey);
+}
+
+.ep-tickets-label {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ep-tickets-label i {
+  color: var(--ep-orange);
+}
+
+.ep-featured-btn {
+  display: inline-block;
+  background-color: var(--ep-orange);
+  color: var(--ep-white);
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 36px;
+  border-radius: 30px;
+  border: 2px solid var(--ep-orange);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.ep-featured-btn:hover {
+  background-color: transparent;
+  color: var(--ep-orange);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════════
+   UPCOMING EVENT CARDS
+═══════════════════════════════════════════ */
+.ep-cards-section {
+  background-color: var(--ep-dark);
+  padding: 72px 40px;
+}
+
+.ep-cards-section .ep-section-eyebrow,
+.ep-cards-section .ep-section-title {
+  text-align: center;
+  color: var(--ep-white);
+}
+
+.ep-cards-section .ep-section-eyebrow {
+  color: var(--ep-orange);
+}
+
+.ep-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+
+.ep-card {
+  background-color: var(--ep-black);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.ep-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
+}
+
+.ep-card-top-bar {
+  height: 4px;
+  background-color: var(--ep-orange);
+  flex-shrink: 0;
+}
+
+.ep-card-body {
+  padding: 20px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.ep-card-date {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ep-orange);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ep-card-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--ep-white);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.ep-card-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+  flex: 1;
+}
+
+.ep-card-location {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ep-card-location i {
+  color: var(--ep-orange);
+  font-size: 0.75rem;
+}
+
+.ep-card-btn {
+  display: block;
+  text-align: center;
+  background: transparent;
+  border: 1.5px solid var(--ep-orange);
+  color: var(--ep-orange);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: auto;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.ep-card-btn:hover {
+  background-color: var(--ep-orange);
+  color: var(--ep-white);
+}
+
+/* ═══════════════════════════════════════════
+   COMMUNITY EVENTS
+═══════════════════════════════════════════ */
+.ep-community {
+  background-color: #111;
+  padding: 80px 40px;
+}
+
+.ep-community-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+
+.ep-community-text {
+  flex: 1.1;
+}
+
+.ep-community-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 20px;
+}
+
+.ep-community-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ep-community-list li {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ep-community-list li i {
+  color: var(--ep-orange);
+  font-size: 0.72rem;
+  flex-shrink: 0;
+}
+
+.ep-community-img-wrap {
+  flex: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  border-bottom: 4px solid var(--ep-orange);
+}
+
+.ep-community-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ═══════════════════════════════════════════
+   HOST AN EVENT
+═══════════════════════════════════════════ */
+.ep-host {
+  background-color: var(--ep-bg);
+  padding: 80px 40px;
+}
+
+.ep-host-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  flex-direction: row-reverse; /* image left, text right */
+}
+
+.ep-host-text {
+  flex: 1.1;
+}
+
+.ep-host-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+.ep-host-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.ep-host-chip {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ep-black);
+  border: 1.5px solid #ccc;
+  padding: 5px 14px;
+  border-radius: 30px;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.ep-host-chip:hover {
+  border-color: var(--ep-orange);
+  color: var(--ep-orange);
+}
+
+.ep-host-btn {
+  display: inline-block;
+  background-color: var(--ep-orange);
+  color: var(--ep-white);
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 36px;
+  border-radius: 30px;
+  border: 2px solid var(--ep-orange);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.ep-host-btn:hover {
+  background-color: transparent;
+  color: var(--ep-orange);
+  transform: translateY(-2px);
+}
+
+.ep-host-img-wrap {
+  flex: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  border-bottom: 4px solid var(--ep-orange);
+}
+
+.ep-host-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ═══════════════════════════════════════════
+   STAY CONNECTED
+═══════════════════════════════════════════ */
+.ep-social {
+  background-color: var(--ep-black);
+  padding: 56px 40px;
+  text-align: center;
+}
+
+.ep-social-eyebrow {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ep-orange);
+  margin: 0 0 10px;
+}
+
+.ep-social-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 28px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ep-social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.ep-social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ep-social-link:hover {
+  color: var(--ep-orange);
+  transform: translateY(-4px);
+}
+
+.ep-social-link i {
+  font-size: 2rem;
+}
+
+.ep-social-link span {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ═══════════════════════════════════════════
+   JOIN THE MOVEMENT CTA
+═══════════════════════════════════════════ */
+.ep-cta-banner {
+  background-color: var(--ep-orange);
+  padding: 64px 40px;
+  text-align: center;
+}
+
+.ep-cta-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  color: var(--ep-white);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 10px;
+}
+
+.ep-cta-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 28px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ep-cta-btn {
+  display: inline-block;
+  background: var(--ep-white);
+  color: var(--ep-orange);
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.88rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 40px;
+  border-radius: 30px;
+  border: 2px solid var(--ep-white);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.ep-cta-btn:hover {
+  background: transparent;
+  color: var(--ep-white);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .ep-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ep-community-inner,
+  .ep-host-inner {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .ep-host-inner {
+    flex-direction: column;
+  }
+
+  .ep-community-img,
+  .ep-host-img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ep-header {
+    padding: 48px 24px 40px;
+  }
+  .ep-featured-section {
+    padding: 0 16px 48px;
+  }
+  .ep-featured-body {
+    padding: 20px 20px 24px;
+  }
+  .ep-featured-meta {
+    gap: 10px;
+  }
+  .ep-cards-section {
+    padding: 48px 24px;
+  }
+  .ep-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .ep-community {
+    padding: 52px 24px;
+  }
+  .ep-host {
+    padding: 52px 24px;
+  }
+  .ep-social {
+    padding: 40px 24px;
+  }
+  .ep-cta-banner {
+    padding: 48px 24px;
+  }
+  .ep-featured-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ep-featured-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

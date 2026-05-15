@@ -7,59 +7,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- icon link:https://cdnjs.com/libraries/font-awesome/6.7.2 | if everbroken use the link to replace-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
     <link
         href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
     <meta name="author" content="Galekwan Sango" />
-
-    <!-- The order of the styles matters: -->
-
-    <!-- general style -->
     <link rel="stylesheet" href="../Styles/style.css" />
-
-    <!-- responsive break points -->
     <link rel="stylesheet" href="../Styles/responsiveBreak.css" />
-
-    <!-- carousel style -->
-    <link rel="stylesheet" href="../Styles/carousel.css" />
-
-    <!-- service section -->
-    <link rel="stylesheet" href="../Styles/services.css" />
-
-    <!-- Mission statement section -->
-    <link rel="stylesheet" href="../Styles/mission-statement.css" />
-    <!-- coaches section -->
-    <link rel="stylesheet" href="../Styles/coaches.css" />
-    <title>Events</title>
+    <link rel="stylesheet" href="../Styles/Pages/events-page.css" />
+    <link rel="stylesheet" href="../Styles/footer.css" />
+    <title>Events — SuperBad Boxing</title>
 </head>
 
 <body>
     <div class="body-container">
+
+        <!-- ── HEADER ── -->
         <div class="header-container">
-            <!-- Logo visible in header bar always -->
             <a href="../index.html"><img id="site-logo" src="../Media/logo.png" alt="site logo" /></a>
-
             <nav class="nav-bar-container">
-                <!-- Hidden checkbox — CSS-only toggle -->
                 <input class="side-menu" type="checkbox" id="side-menu" />
-
-                <!-- Hamburger / X — fixed top-right on mobile -->
-                <label class="hamb" for="side-menu">
-                    <span class="hamb-line"></span>
-                </label>
-
-                <!-- Nav overlay -->
+                <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
                 <ul class="nav-items-container">
-                    <!-- Logo shown inside the overlay on mobile -->
                     <a href="../index.html"><img class="overlay-logo" src="../Media/logo.png" alt="site logo" /></a>
-
                     <li class="nav-items"><a href="./about.html">About</a></li>
                     <li class="nav-items"><a href="./coaches.html">Coaches</a></li>
                     <li class="nav-items"><a href="./fighters.html">Fighters</a></li>
@@ -67,18 +39,298 @@
                     <li class="nav-items"><a href="./membership.html">Membership</a></li>
                     <li class="nav-items"><a href="./events.html">Events</a></li>
                     <li class="nav-items"><a href="./program.html">Program</a></li>
-                    <li class="nav-items"><a href="./about.html">Tribute</a></li>
+                    <li class="nav-items"><a href="./tribute.html">Tribute</a></li>
                     <li class="nav-items"><a href="./contact-us.html">Contact US</a></li>
                 </ul>
             </nav>
         </div>
+
         <div class="content-container">
 
-        </div>
+            <!-- ── PAGE HEADER ── -->
+            <section class="ep-header">
+                <p class="ep-eyebrow">SuperBad Boxing Gym</p>
+                <h1 class="ep-title">Upcoming <span class="ep-accent">Events</span></h1>
+                <p class="ep-sub">
+                    Stay connected with everything happening at SuperBad Boxing Gym. From amateur fight nights
+                    and sparring exhibitions to community events, youth showcases, fitness challenges, and
+                    professional boxing appearances — our events bring together athletes, families, and the
+                    Detroit community through the culture of boxing.
+                </p>
+            </section>
 
-        <script src="../scripts/index.js"></script>
-        <script src="../scripts/coaches.js"></script>
+            <!-- ── FEATURED EVENT ── -->
+            <section class="ep-featured-section">
+                <div class="ep-featured-card">
+                    <div class="ep-featured-accent-bar"></div>
+                    <div class="ep-featured-img-wrap">
+                        <!-- event img card -->
+                        <img src="../Media/sparring.webp" alt="Detroit Fight Night" class="ep-featured-img" />
+                        <span class="ep-featured-badge">
+                            <i class="fa-solid fa-star" aria-hidden="true"></i> Featured Event
+                        </span>
+                    </div>
+                    <div class="ep-featured-body">
+                        <div class="ep-featured-meta">
+                            <span class="ep-meta-item"><i class="fa-solid fa-calendar-days"></i> Saturday, August
+                                17</span>
+                            <span class="ep-meta-item"><i class="fa-solid fa-clock"></i> 6:00 PM</span>
+                            <span class="ep-meta-item"><i class="fa-solid fa-location-dot"></i> SuperBad Boxing Gym —
+                                Detroit, MI</span>
+                        </div>
+                        <h2 class="ep-featured-title">Detroit <span class="ep-accent">Fight Night</span></h2>
+                        <p class="ep-featured-desc">
+                            Experience an exciting night of competitive amateur boxing featuring rising fighters
+                            from Detroit and surrounding areas. Watch athletes showcase their hard work, discipline,
+                            and talent inside the ring while supporting the next generation of champions.
+                        </p>
+                        <div class="ep-featured-chips">
+                            <span class="ep-chip"><i class="fa-solid fa-hand-fist"></i> Live Amateur Matches</span>
+                            <span class="ep-chip"><i class="fa-solid fa-people-group"></i> Youth &amp; Adult
+                                Comps</span>
+                            <span class="ep-chip"><i class="fa-solid fa-star"></i> Guest Appearances</span>
+                            <span class="ep-chip"><i class="fa-solid fa-music"></i> Music &amp; Entertainment</span>
+                            <span class="ep-chip"><i class="fa-solid fa-handshake"></i> Community Networking</span>
+                            <span class="ep-chip"><i class="fa-solid fa-utensils"></i> Food &amp; Refreshments</span>
+                        </div>
+                        <div class="ep-featured-footer">
+                            <p class="ep-tickets-label">
+                                <i class="fa-solid fa-ticket"></i> Tickets Available Soon
+                            </p>
+                            <a href="./contact-us.html" class="ep-featured-btn">Reserve Your Spot</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <!-- ── UPCOMING EVENT CARDS ── -->
+            <section class="ep-cards-section">
+                <p class="ep-section-eyebrow">On the Calendar</p>
+                <h2 class="ep-section-title">More <span class="ep-accent">Events</span></h2>
+                <div class="ep-cards-grid">
+
+                    <article class="ep-card">
+                        <div class="ep-card-top-bar"></div>
+                        <div class="ep-card-body">
+                            <span class="ep-card-date">
+                                <i class="fa-solid fa-calendar-days"></i> September 5
+                            </span>
+                            <h3 class="ep-card-title">Youth Boxing Showcase</h3>
+                            <p class="ep-card-desc">
+                                A special event highlighting the hard work and development of our youth athletes
+                                as they compete and demonstrate their boxing skills.
+                            </p>
+                            <p class="ep-card-location">
+                                <i class="fa-solid fa-location-dot"></i> SuperBad Boxing Gym, Detroit MI
+                            </p>
+                            <a href="./contact-us.html" class="ep-card-btn">Learn More</a>
+                        </div>
+                    </article>
+
+                    <article class="ep-card">
+                        <div class="ep-card-top-bar"></div>
+                        <div class="ep-card-body">
+                            <span class="ep-card-date">
+                                <i class="fa-solid fa-calendar-days"></i> September 12
+                            </span>
+                            <h3 class="ep-card-title">Strength &amp; Conditioning Bootcamp</h3>
+                            <p class="ep-card-desc">
+                                A high-intensity group workout focused on endurance, strength, conditioning,
+                                and athletic performance open to all fitness levels.
+                            </p>
+                            <p class="ep-card-location">
+                                <i class="fa-solid fa-location-dot"></i> SuperBad Boxing Gym, Detroit MI
+                            </p>
+                            <a href="./contact-us.html" class="ep-card-btn">Learn More</a>
+                        </div>
+                    </article>
+
+                    <article class="ep-card">
+                        <div class="ep-card-top-bar"></div>
+                        <div class="ep-card-body">
+                            <span class="ep-card-date">
+                                <i class="fa-solid fa-calendar-days"></i> September 26
+                            </span>
+                            <h3 class="ep-card-title">Sparring Exhibition Night</h3>
+                            <p class="ep-card-desc">
+                                Watch local fighters sharpen their skills in a controlled sparring environment
+                                designed to promote growth, experience, and community.
+                            </p>
+                            <p class="ep-card-location">
+                                <i class="fa-solid fa-location-dot"></i> SuperBad Boxing Gym, Detroit MI
+                            </p>
+                            <a href="./contact-us.html" class="ep-card-btn">Learn More</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- ── COMMUNITY EVENTS ── -->
+            <section class="ep-community">
+                <div class="ep-community-inner">
+                    <div class="ep-community-text">
+                        <p class="ep-section-eyebrow ep-section-eyebrow--light">Community First</p>
+                        <h2 class="ep-section-title ep-section-title--white">
+                            More Than a <span class="ep-accent">Boxing Gym</span>
+                        </h2>
+                        <p class="ep-community-desc">
+                            At SuperBad Boxing Gym, our events are designed to bring people together and create
+                            positive opportunities for the community. We regularly host programs focused on youth
+                            mentorship, fitness, health awareness, and community engagement.
+                        </p>
+                        <ul class="ep-community-list">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Youth mentorship events</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Back-to-school drives</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Open gym nights</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Fitness bootcamps</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Boxing showcases</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Athlete meet-and-greets</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Community outreach programs</li>
+                        </ul>
+                    </div>
+                    <div class="ep-community-img-wrap">
+                        <img src="/Media/about-team.webp" alt="SuperBad community events" class="ep-community-img" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── HOST AN EVENT ── -->
+            <section class="ep-host">
+                <div class="ep-host-inner">
+                    <div class="ep-host-text">
+                        <p class="ep-section-eyebrow">Partner With Us</p>
+                        <h2 class="ep-section-title">Host an Event <span class="ep-accent">With Us</span></h2>
+                        <p class="ep-host-desc">
+                            Looking to organize a boxing event, fitness workshop, community gathering, or youth
+                            program? SuperBad Boxing Gym offers a motivating and authentic environment perfect
+                            for impactful events and experiences.
+                        </p>
+                        <div class="ep-host-chips">
+                            <span class="ep-host-chip">Boxing Exhibitions</span>
+                            <span class="ep-host-chip">Fitness Classes</span>
+                            <span class="ep-host-chip">Youth Programs</span>
+                            <span class="ep-host-chip">Community Outreach</span>
+                            <span class="ep-host-chip">Private Seminars</span>
+                            <span class="ep-host-chip">Athlete Showcases</span>
+                        </div>
+                        <a href="./contact-us.html" class="ep-host-btn">Contact Us</a>
+                    </div>
+                    <div class="ep-host-img-wrap">
+                        <img src="../Media/superbad.webp" alt="Host an event at SuperBad" class="ep-host-img" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── STAY CONNECTED ── -->
+            <section class="ep-social">
+                <p class="ep-social-eyebrow">Stay Connected</p>
+                <p class="ep-social-sub">
+                    Follow us for updates on upcoming fights, gym events, training camps, and community activities.
+                </p>
+                <div class="ep-social-icons">
+                    <a href="#" class="ep-social-link" aria-label="Facebook">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="ep-social-link" aria-label="Instagram">
+                        <i class="fa-brands fa-square-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" class="ep-social-link" aria-label="Twitter">
+                        <i class="fa-brands fa-square-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" class="ep-social-link" aria-label="YouTube">
+                        <i class="fa-brands fa-square-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ── JOIN THE MOVEMENT CTA ── -->
+            <section class="ep-cta-banner">
+                <h2 class="ep-cta-title">Join the Movement</h2>
+                <p class="ep-cta-sub">
+                    At SuperBad Boxing Gym, every event represents passion, discipline, and the fighting spirit of
+                    Detroit.
+                </p>
+                <a href="./membership.html" class="ep-cta-btn">View Membership Options</a>
+            </section>
+
+        </div><!-- end content-container -->
+
+        <!-- ── FOOTER ── -->
+        <footer class="site-footer">
+            <div class="sf-inner">
+                <div class="sf-brand">
+                    <a href="../index.html"><img src="../Media/logo.png" alt="SuperBad Boxing Gym logo"
+                            class="sf-logo" /></a>
+                    <p class="sf-tagline">Built in Detroit. Driven by Excellence.</p>
+                    <p class="sf-desc">SuperBad Boxing Gym is more than a place to train — it is a community built on
+                        discipline, hard work, and the fighting spirit of Detroit.</p>
+                    <div class="sf-socials">
+                        <a href="#" aria-label="Facebook" class="sf-social-link"><i
+                                class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#" aria-label="Instagram" class="sf-social-link"><i
+                                class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#" aria-label="Twitter / X" class="sf-social-link"><i
+                                class="fa-brands fa-square-twitter"></i></a>
+                        <a href="#" aria-label="YouTube" class="sf-social-link"><i
+                                class="fa-brands fa-square-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="sf-col">
+                    <h3 class="sf-col-title">Quick Links</h3>
+                    <ul class="sf-links">
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./coaches.html">Coaches</a></li>
+                        <li><a href="./fighters.html">Fighters</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="./membership.html">Membership</a></li>
+                        <li><a href="./events.html">Events</a></li>
+                        <li><a href="./program.html">Program</a></li>
+                        <li><a href="./contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="sf-col">
+                    <h3 class="sf-col-title">Contact</h3>
+                    <ul class="sf-contact-list">
+                        <li><i class="fa-solid fa-location-dot"></i><span>8701 Puritan Ave<br />Detroit, MI 48238</span>
+                        </li>
+                        <li><i class="fa-solid fa-phone"></i><a href="tel:+13132838348">(313) 283-8348</a></li>
+                        <li><i class="fa-solid fa-globe"></i><a href="http://tonysuperbadharrison.com" target="_blank"
+                                rel="noopener">tonysuperbadharrison.com</a></li>
+                    </ul>
+                    <h3 class="sf-col-title sf-col-title--hours">Hours</h3>
+                    <ul class="sf-hours">
+                        <li><span>Mon – Fri</span><span>7:00 AM – 8:00 PM</span></li>
+                        <li><span>Saturday</span><span>8:00 AM – 7:00 PM</span></li>
+                        <li class="sf-hours-closed"><span>Sunday</span><span>Closed</span></li>
+                    </ul>
+                </div>
+                <div class="sf-col sf-col--cta">
+                    <h3 class="sf-col-title">Start Your Journey</h3>
+                    <p class="sf-cta-text">Train with purpose. Build confidence. Join the SuperBad family today.</p>
+                    <a href="./contact-us.html" class="sf-cta-btn">Get Started</a>
+                    <a href="./membership.html" class="sf-cta-link">View Membership Options →</a>
+                </div>
+            </div>
+            <div class="sf-bottom">
+                <p class="sf-copy">&copy; <span id="sfYear"></span> SuperBad Boxing Gym. Detroit, MI. All rights
+                    reserved.</p>
+                <p class="sf-credit">Designed &amp; built by <span class="sf-credit-name">Galekwan Sango</span></p>
+            </div>
+        </footer>
+
+        <script>
+            const sfYear = document.getElementById('sfYear');
+            if (sfYear) sfYear.textContent = new Date().getFullYear();
+        </script>
+
+    </div><!-- end body-container -->
+
+    <script src="../scripts/index.js"></script>
 </body>
 
 </html>
