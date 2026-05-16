@@ -64,6 +64,14 @@
   background-color: var(--mp-bg);
   padding: 64px 40px;
 }
+.mp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mp-card-header p {
+  font-weight: bold;
+}
 
 .mp-cards-grid {
   display: grid;
