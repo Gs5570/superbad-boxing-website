@@ -57,6 +57,7 @@
 
 .service-name {
   font-weight: bolder;
+  font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 .service-img-container {

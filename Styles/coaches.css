@@ -14,7 +14,7 @@
 .fa-solid:hover {
   cursor: pointer;
   color: aliceblue;
-  text-decoration: underline double;
+  /* text-decoration: underline double; */
 }
 .fa-brands:hover {
   cursor: pointer;

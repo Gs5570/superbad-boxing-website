@@ -323,3 +323,9 @@ textarea {
   box-shadow: 0 2px 6px rgba(247, 105, 2, 0.3);
   background-color: rgb(200, 78, 0); /* darker on press */
 }
+
+.coach-name {
+  font-size: clamp(1rem, 1.5vw, 2.5rem);
+  color: aliceblue;
+  font-weight: bolder;
+}
