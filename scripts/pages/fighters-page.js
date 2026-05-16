@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
           label: 'Instagram',
           href: '#',
         },
-        { icon: 'fa-brands fa-square-twitter', label: 'Twitter', href: '#' },
+        { icon: 'fa-brands fa-x-twitter ', label: 'Twitter', href: '#' },
       ],
     },
     lj: {
@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
           label: 'Instagram',
           href: '#',
         },
+        { icon: 'fa-brands fa-x-twitter ', label: 'Twitter', href: '#' },
       ],
     },
     marcus: {
@@ -68,11 +69,13 @@ document.addEventListener('DOMContentLoaded', function () {
         { label: 'Career', value: '2020 – Present' },
       ],
       socials: [
+        { icon: 'fa-brands fa-square-facebook', label: 'Facebook', href: '#' },
         {
           icon: 'fa-brands fa-square-instagram',
           label: 'Instagram',
           href: '#',
         },
+        { icon: 'fa-brands fa-x-twitter ', label: 'Twitter', href: '#' },
       ],
     },
     diana: {
@@ -97,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
           label: 'Instagram',
           href: '#',
         },
+        { icon: 'fa-brands fa-x-twitter ', label: 'Twitter', href: '#' },
       ],
     },
     jaylen: {
@@ -117,11 +121,13 @@ document.addEventListener('DOMContentLoaded', function () {
         { label: 'Grade', value: 'High school' },
       ],
       socials: [
+        { icon: 'fa-brands fa-square-facebook', label: 'Facebook', href: '#' },
         {
           icon: 'fa-brands fa-square-instagram',
           label: 'Instagram',
           href: '#',
         },
+        { icon: 'fa-brands fa-x-twitter ', label: 'Twitter', href: '#' },
       ],
     },
     keisha: {
@@ -140,11 +146,13 @@ document.addEventListener('DOMContentLoaded', function () {
         { label: 'Career', value: '2024 – Present' },
       ],
       socials: [
+        { icon: 'fa-brands fa-square-facebook', label: 'Facebook', href: '#' },
         {
           icon: 'fa-brands fa-square-instagram',
           label: 'Instagram',
           href: '#',
         },
+        { icon: 'fa-brands fa-x-twitter ', label: 'Twitter', href: '#' },
       ],
     },
   };
