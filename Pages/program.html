@@ -7,62 +7,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- icon link:https://cdnjs.com/libraries/font-awesome/6.7.2 | if everbroken use the link to replace-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
     <link
         href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
     <meta name="author" content="Galekwan Sango" />
-
-    <!-- The order of the styles matters: -->
-
-    <!-- general style -->
     <link rel="stylesheet" href="../Styles/style.css" />
-
-    <!-- responsive break points -->
     <link rel="stylesheet" href="../Styles/responsiveBreak.css" />
-
-    <!-- carousel style -->
-    <link rel="stylesheet" href="../Styles/carousel.css" />
-
-    <!-- service section -->
-    <link rel="stylesheet" href="../Styles/services.css" />
-
-    <!-- Mission statement section -->
-    <link rel="stylesheet" href="../Styles/mission-statement.css" />
-    <!-- coaches section -->
-    <link rel="stylesheet" href="../Styles/coaches.css" />
-
-    <!-- footer-section -->
-    <link rel="stylesheet" href="/Styles/footer.css" />
-    <title>Program</title>
+    <link rel="stylesheet" href="../Styles/Pages/program-page.css" />
+    <link rel="stylesheet" href="../Styles/footer.css" />
+    <title>Programs — SuperBad Boxing</title>
 </head>
 
 <body>
     <div class="body-container">
+
+        <!-- ── HEADER ── -->
         <div class="header-container">
-            <!-- Logo visible in header bar always -->
             <a href="../index.html"><img id="site-logo" src="../Media/logo.png" alt="site logo" /></a>
-
             <nav class="nav-bar-container">
-                <!-- Hidden checkbox — CSS-only toggle -->
                 <input class="side-menu" type="checkbox" id="side-menu" />
-
-                <!-- Hamburger / X — fixed top-right on mobile -->
-                <label class="hamb" for="side-menu">
-                    <span class="hamb-line"></span>
-                </label>
-
-                <!-- Nav overlay -->
+                <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
                 <ul class="nav-items-container">
-                    <!-- Logo shown inside the overlay on mobile -->
                     <a href="../index.html"><img class="overlay-logo" src="../Media/logo.png" alt="site logo" /></a>
-
                     <li class="nav-items"><a href="./about.html">About</a></li>
                     <li class="nav-items"><a href="./coaches.html">Coaches</a></li>
                     <li class="nav-items"><a href="./fighters.html">Fighters</a></li>
@@ -75,44 +44,343 @@
                 </ul>
             </nav>
         </div>
-        <div class="content-container"></div>
-        <!-- ════════════════════════════════════════════
-                SUPERBAD BOXING GYM — SITE FOOTER
-                Copy this footer block into every page,
-                replacing the existing <footer> tag.
-                Adjust ../  vs ./  paths based on page depth.
-           ════════════════════════════════════════════ -->
 
-        <footer class="site-footer">
-            <div class="sf-inner">
+        <div class="content-container">
 
-                <!-- Col 1: Brand -->
-                <div class="sf-brand">
-                    <a href="../index.html">
-                        <img src="../Media/logo.png" alt="SuperBad Boxing Gym logo" class="sf-logo" />
-                    </a>
-                    <p class="sf-tagline">Built in Detroit. Driven by Excellence.</p>
-                    <p class="sf-desc">
-                        SuperBad Boxing Gym is more than a place to train — it is a community
-                        built on discipline, hard work, and the fighting spirit of Detroit.
+            <!-- ── HERO ── -->
+            <section class="pp-hero">
+                <div class="pp-hero-overlay"></div>
+                <div class="pp-hero-content">
+                    <p class="pp-eyebrow">SuperBad Boxing Gym</p>
+                    <h1 class="pp-hero-title">Programs Designed to Build <span class="pp-accent">Champions</span></h1>
+                    <p class="pp-hero-sub">
+                        At SuperBad Boxing Gym, our programs develop more than athletes, we develop
+                        discipline, confidence, leadership, and mental toughness. Every program is built
+                        around hard work, structure, and the fighting spirit of Detroit.
                     </p>
-                    <div class="sf-socials">
-                        <a href="#" aria-label="Facebook" class="sf-social-link">
-                            <i class="fa-brands fa-square-facebook"></i>
-                        </a>
-                        <a href="#" aria-label="Instagram" class="sf-social-link">
-                            <i class="fa-brands fa-square-instagram"></i>
-                        </a>
-                        <a href="#" aria-label="Twitter / X" class="sf-social-link">
-                            <i class="fa-brands fa-square-twitter"></i>
-                        </a>
-                        <a href="#" aria-label="YouTube" class="sf-social-link">
-                            <i class="fa-brands fa-square-youtube"></i>
-                        </a>
+                    <a href="#pp-programs" class="pp-hero-btn">Explore Programs</a>
+                </div>
+            </section>
+
+            <!-- ── STICKY ANCHOR NAV ── -->
+            <div class="pp-anchor-bar" id="ppAnchorBar">
+                <div class="pp-anchors">
+                    <a href="#prog-boxing" class="pp-anchor-link is-active">Boxing Training</a>
+                    <a href="#prog-strength" class="pp-anchor-link">Strength &amp; Conditioning</a>
+                    <a href="#prog-youth" class="pp-anchor-link">Youth Development</a>
+                    <a href="#prog-fighter" class="pp-anchor-link">Fighter Development</a>
+                    <a href="#prog-private" class="pp-anchor-link">Private Lessons</a>
+                    <a href="#prog-athlete" class="pp-anchor-link">Athlete Performance</a>
+                    <a href="#prog-community" class="pp-anchor-link">Community</a>
+                </div>
+            </div>
+
+            <!-- ── PROGRAMS ── -->
+            <div id="pp-programs">
+
+                <!-- 1. Boxing Training -->
+                <section class="pp-program pp-program--light" id="prog-boxing">
+                    <div class="pp-program-inner">
+                        <div class="pp-program-text">
+                            <span class="pp-program-badge">Boxing Training Program</span>
+                            <h2 class="pp-program-title">Learn Real <span class="pp-accent">Boxing</span></h2>
+                            <p class="pp-program-desc">
+                                Our Boxing Training Program teaches authentic boxing fundamentals including
+                                footwork, combinations, defense, conditioning, movement, ring awareness, and
+                                mental discipline. Designed for beginners, intermediate members, and competitive
+                                fighters. These high-energy sessions help members improve physically while
+                                learning the technical side of boxing in a motivating environment.
+                            </p>
+                            <ul class="pp-program-list">
+                                <li><i class="fa-solid fa-check"></i> Boxing fundamentals</li>
+                                <li><i class="fa-solid fa-check"></i> Mitt work &amp; heavy bag training</li>
+                                <li><i class="fa-solid fa-check"></i> Sparring development</li>
+                                <li><i class="fa-solid fa-check"></i> Footwork &amp; defense</li>
+                                <li><i class="fa-solid fa-check"></i> Cardio &amp; endurance training</li>
+                                <li><i class="fa-solid fa-check"></i> Technical boxing instruction</li>
+                            </ul>
+                            <a href="./contact-us.html" class="pp-program-btn">Get Started</a>
+                        </div>
+                        <div class="pp-program-img-wrap">
+                            <img src="../Media/LJ-mitts.avif" alt="Boxing training program" class="pp-program-img" />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Strength & Conditioning -->
+                <section class="pp-program pp-program--grey pp-program--reversed" id="prog-strength">
+                    <div class="pp-program-inner">
+                        <div class="pp-program-text">
+                            <span class="pp-program-badge">Strength &amp; Conditioning Program</span>
+                            <h2 class="pp-program-title">Build Strength. Power. <span
+                                    class="pp-accent">Endurance.</span></h2>
+                            <p class="pp-program-desc">
+                                Our Strength &amp; Conditioning Program focuses on athletic performance, explosive
+                                power, speed, endurance, agility, and total-body conditioning. Training methods are
+                                inspired by elite-level boxing and sports performance programs used by professional
+                                athletes and fighters.
+                            </p>
+                            <ul class="pp-program-list">
+                                <li><i class="fa-solid fa-check"></i> Functional strength training</li>
+                                <li><i class="fa-solid fa-check"></i> Speed &amp; agility drills</li>
+                                <li><i class="fa-solid fa-check"></i> HIIT conditioning</li>
+                                <li><i class="fa-solid fa-check"></i> Core &amp; endurance development</li>
+                                <li><i class="fa-solid fa-check"></i> Athletic performance coaching</li>
+                                <li><i class="fa-solid fa-check"></i> Weight-loss &amp; fitness training</li>
+                            </ul>
+                            <a href="./contact-us.html" class="pp-program-btn">Get Started</a>
+                        </div>
+                        <div class="pp-program-img-wrap">
+                            <img src="../Media/team-1.webp" alt="Strength and conditioning program"
+                                class="pp-program-img" />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Youth Development -->
+                <section class="pp-program pp-program--light" id="prog-youth">
+                    <div class="pp-program-inner">
+                        <div class="pp-program-text">
+                            <span class="pp-program-badge">Youth Development Program</span>
+                            <h2 class="pp-program-title">Building the Next <span class="pp-accent">Generation</span>
+                            </h2>
+                            <p class="pp-program-desc">
+                                Our Youth Development Program uses boxing as a tool to teach discipline,
+                                accountability, confidence, leadership, and respect. We provide a positive
+                                environment where young athletes can grow mentally and physically while staying
+                                active and motivated. The program focuses on mentorship and creating opportunities
+                                for Detroit youth through structure, guidance, and teamwork.
+                            </p>
+                            <ul class="pp-program-list">
+                                <li><i class="fa-solid fa-check"></i> Boxing fundamentals</li>
+                                <li><i class="fa-solid fa-check"></i> Character development</li>
+                                <li><i class="fa-solid fa-check"></i> Leadership &amp; mentorship</li>
+                                <li><i class="fa-solid fa-check"></i> Fitness &amp; conditioning</li>
+                                <li><i class="fa-solid fa-check"></i> Teamwork &amp; discipline</li>
+                                <li><i class="fa-solid fa-check"></i> Competition preparation</li>
+                            </ul>
+                            <a href="./contact-us.html" class="pp-program-btn">Get Started</a>
+                        </div>
+                        <div class="pp-program-img-wrap">
+                            <img src="../Media/kid-3.webp" alt="Youth development program" class="pp-program-img" />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. Fighter Development -->
+                <section class="pp-program pp-program--dark" id="prog-fighter">
+                    <div class="pp-program-inner">
+                        <div class="pp-program-text">
+                            <span class="pp-program-badge pp-program-badge--dark">Amateur &amp; Professional Fighter
+                                Development</span>
+                            <h2 class="pp-program-title pp-program-title--white">Train Like a <span
+                                    class="pp-accent">Champion</span></h2>
+                            <p class="pp-program-desc pp-program-desc--light">
+                                Our fighter development program prepares athletes for amateur and professional
+                                competition through advanced boxing instruction, sparring, conditioning, strategy,
+                                and fight preparation. SuperBad Boxing Gym has become home to nationally ranked
+                                amateur fighters, champions, and professional athletes competing at elite levels.
+                            </p>
+                            <ul class="pp-program-list pp-program-list--light">
+                                <li><i class="fa-solid fa-check"></i> Advanced boxing coaching</li>
+                                <li><i class="fa-solid fa-check"></i> Competitive sparring</li>
+                                <li><i class="fa-solid fa-check"></i> Fight camp preparation</li>
+                                <li><i class="fa-solid fa-check"></i> Strength &amp; conditioning</li>
+                                <li><i class="fa-solid fa-check"></i> National tournament preparation</li>
+                                <li><i class="fa-solid fa-check"></i> Professional athlete development</li>
+                            </ul>
+                            <a href="./contact-us.html" class="pp-program-btn pp-program-btn--outline">Get Started</a>
+                        </div>
+                        <div class="pp-program-img-wrap">
+                            <img src="../Media/tony-champ.avif" alt="Fighter development program"
+                                class="pp-program-img" />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. Private Lessons -->
+                <section class="pp-program pp-program--grey pp-program--reversed" id="prog-private">
+                    <div class="pp-program-inner">
+                        <div class="pp-program-text">
+                            <span class="pp-program-badge">Private Lessons / Personal Training</span>
+                            <h2 class="pp-program-title">One-On-One <span class="pp-accent">Coaching</span></h2>
+                            <p class="pp-program-desc">
+                                Receive personalized training tailored specifically to your goals and experience level.
+                                Whether you are training for fitness, learning boxing fundamentals, or preparing for
+                                competition, our coaches provide customized instruction to help you improve faster
+                                and perform at your best.
+                            </p>
+                            <ul class="pp-program-list">
+                                <li><i class="fa-solid fa-check"></i> Personalized boxing instruction</li>
+                                <li><i class="fa-solid fa-check"></i> Mitt work &amp; technique drills</li>
+                                <li><i class="fa-solid fa-check"></i> Customized fitness plans</li>
+                                <li><i class="fa-solid fa-check"></i> Strength &amp; conditioning</li>
+                                <li><i class="fa-solid fa-check"></i> Weight-loss training</li>
+                                <li><i class="fa-solid fa-check"></i> Fight preparation</li>
+                            </ul>
+                            <a href="./contact-us.html" class="pp-program-btn">Get Started</a>
+                        </div>
+                        <div class="pp-program-img-wrap">
+                            <img src="../Media/train-one-on-one-jas.webp" alt="Private boxing lessons"
+                                class="pp-program-img" />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. Athlete Performance -->
+                <section class="pp-program pp-program--light" id="prog-athlete">
+                    <div class="pp-program-inner">
+                        <div class="pp-program-text">
+                            <span class="pp-program-badge">Athlete Performance Program</span>
+                            <h2 class="pp-program-title">Training Beyond <span class="pp-accent">Boxing</span></h2>
+                            <p class="pp-program-desc">
+                                SuperBad Boxing Gym works with athletes from multiple sports including football,
+                                basketball, and collegiate athletics. The gym has trained NFL players, college
+                                athletes, and elite competitors using performance-focused strength and conditioning
+                                systems built around explosive movement and sport-specific conditioning.
+                            </p>
+                            <ul class="pp-program-list">
+                                <li><i class="fa-solid fa-check"></i> Explosive athletic training</li>
+                                <li><i class="fa-solid fa-check"></i> Speed &amp; mobility work</li>
+                                <li><i class="fa-solid fa-check"></i> Injury prevention</li>
+                                <li><i class="fa-solid fa-check"></i> Sport-specific conditioning</li>
+                                <li><i class="fa-solid fa-check"></i> Recovery &amp; endurance training</li>
+                            </ul>
+                            <a href="./contact-us.html" class="pp-program-btn">Get Started</a>
+                        </div>
+                        <div class="pp-program-img-wrap">
+                            <img src="../Media/sparring.webp" alt="Athlete performance program"
+                                class="pp-program-img" />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. Community -->
+                <section class="pp-program pp-program--grey pp-program--reversed" id="prog-community">
+                    <div class="pp-program-inner">
+                        <div class="pp-program-text">
+                            <span class="pp-program-badge">Community Outreach &amp; Mentorship</span>
+                            <h2 class="pp-program-title">More Than a <span class="pp-accent">Gym</span></h2>
+                            <p class="pp-program-desc">
+                                SuperBad Boxing Gym is deeply involved in uplifting the Detroit community through
+                                mentorship, youth support, and positive development programs. The gym was built to
+                                provide young people with guidance, structure, and opportunities while preserving
+                                Detroit's rich boxing culture and legacy.
+                            </p>
+                            <ul class="pp-program-list">
+                                <li><i class="fa-solid fa-check"></i> Youth mentorship</li>
+                                <li><i class="fa-solid fa-check"></i> Community fitness events</li>
+                                <li><i class="fa-solid fa-check"></i> Boxing showcases</li>
+                                <li><i class="fa-solid fa-check"></i> Athlete guidance &amp; support</li>
+                                <li><i class="fa-solid fa-check"></i> Positive youth engagement</li>
+                                <li><i class="fa-solid fa-check"></i> Community outreach activities</li>
+                            </ul>
+                            <a href="./contact-us.html" class="pp-program-btn">Get Involved</a>
+                        </div>
+                        <div class="pp-program-img-wrap">
+                            <img src="../Media/familly-carousel.webp" alt="Community outreach and mentorship"
+                                class="pp-program-img" />
+                        </div>
+                    </div>
+                </section>
+
+            </div><!-- end #pp-programs -->
+
+            <!-- ── GOFUNDME / SUPPORT SECTION ── -->
+            <section class="pp-support">
+                <div class="pp-support-inner">
+                    <div class="pp-support-text">
+                        <p class="pp-support-eyebrow">Support the Mission</p>
+                        <h2 class="pp-support-title">Help Us Expand <span class="pp-accent">SuperBad Boxing Gym</span>
+                        </h2>
+                        <p class="pp-support-desc">
+                            As SuperBad Boxing Gym continues to grow, the team is working to expand and renovate
+                            the facility to better serve athletes and the Detroit community. The gym currently
+                            trains hundreds of young athletes and nationally ranked fighters while continuing to
+                            mentor and support Detroit youth.
+                        </p>
+
+                        <!-- Planned upgrades -->
+                        <div class="pp-upgrades">
+                            <p class="pp-upgrades-label">Planned Upgrades</p>
+                            <div class="pp-upgrades-grid">
+                                <span class="pp-upgrade-item"><i class="fa-solid fa-dumbbell"></i> Expanded weight
+                                    room</span>
+                                <span class="pp-upgrade-item"><i class="fa-solid fa-heart-pulse"></i> Modern fitness
+                                    center</span>
+                                <span class="pp-upgrade-item"><i class="fa-solid fa-basketball"></i> New basketball
+                                    court</span>
+                                <span class="pp-upgrade-item"><i class="fa-solid fa-wrench"></i> Updated
+                                    equipment</span>
+                                <span class="pp-upgrade-item"><i class="fa-solid fa-trophy"></i> Enhanced training
+                                    spaces</span>
+                            </div>
+                        </div>
+
+                        <!-- CTAs -->
+                        <div class="pp-support-btns">
+                            <a href="https://www.gofundme.com/f/help-lj-expand-superbad-fitness-for-all" target="_blank"
+                                rel="noopener" class="pp-gofundme-btn">
+                                <i class="fa-solid fa-heart"></i> Support on GoFundMe
+                            </a>
+                            <a href="./contact-us.html" class="pp-support-secondary-btn">Learn More</a>
+                        </div>
+
+                        <p class="pp-support-note">Every contribution helps create better opportunities, updated
+                            equipment, and expanded programs for athletes, youth, and the Detroit community.</p>
+                    </div>
+
+                    <!-- Impact stats -->
+                    <div class="pp-support-stats">
+                        <div class="pp-stat">
+                            <span class="pp-stat-number">500+</span>
+                            <span class="pp-stat-label">Youth Athletes Trained</span>
+                        </div>
+                        <div class="pp-stat">
+                            <span class="pp-stat-number">#1</span>
+                            <span class="pp-stat-label">Nationally Ranked Fighters</span>
+                        </div>
+                        <div class="pp-stat">
+                            <span class="pp-stat-number">Detroit</span>
+                            <span class="pp-stat-label">Community Focused</span>
+                        </div>
+                        <div class="pp-stat">
+                            <span class="pp-stat-number">7+</span>
+                            <span class="pp-stat-label">Programs Available</span>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Col 2: Quick Links -->
+            <!-- ── CTA BANNER ── -->
+            <section class="pp-cta-banner">
+                <h2 class="pp-cta-title">Ready to Start Your Journey?</h2>
+                <p class="pp-cta-sub">Train with purpose. Build confidence. Become stronger every day.</p>
+                <a href="./contact-us.html" class="pp-cta-btn">Contact Us Today</a>
+            </section>
+
+        </div><!-- end content-container -->
+
+        <!-- ── FOOTER ── -->
+        <footer class="site-footer">
+            <div class="sf-inner">
+                <div class="sf-brand">
+                    <a href="../index.html"><img src="../Media/logo.png" alt="SuperBad Boxing Gym logo"
+                            class="sf-logo" /></a>
+                    <p class="sf-tagline">Built in Detroit. Driven by Excellence.</p>
+                    <p class="sf-desc">SuperBad Boxing Gym is more than a place to train, it is a community built on
+                        discipline, hard work, and the fighting spirit of Detroit.</p>
+                    <div class="sf-socials">
+                        <a href="#" aria-label="Facebook" class="sf-social-link"><i
+                                class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#" aria-label="Instagram" class="sf-social-link"><i
+                                class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#" aria-label="Twitter / X" class="sf-social-link"><i
+                                class="fa-brands fa-square-twitter"></i></a>
+                        <a href="#" aria-label="YouTube" class="sf-social-link"><i
+                                class="fa-brands fa-square-youtube"></i></a>
+                    </div>
+                </div>
                 <div class="sf-col">
                     <h3 class="sf-col-title">Quick Links</h3>
                     <ul class="sf-links">
@@ -126,80 +394,45 @@
                         <li><a href="./contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
-
-                <!-- Col 3: Contact Info -->
                 <div class="sf-col">
                     <h3 class="sf-col-title">Contact</h3>
                     <ul class="sf-contact-list">
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>8701 Puritan Ave<br />Detroit, MI 48238</span>
+                        <li><i class="fa-solid fa-location-dot"></i><span>8701 Puritan Ave<br />Detroit, MI 48238</span>
                         </li>
-                        <li>
-                            <i class="fa-solid fa-phone"></i>
-                            <a href="tel:+13132838348">(313) 283-8348</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-globe"></i>
-                            <a href="http://tonysuperbadharrison.com" target="_blank" rel="noopener">
-                                tonysuperbadharrison.com
-                            </a>
-                        </li>
+                        <li><i class="fa-solid fa-phone"></i><a href="tel:+13132838348">(313) 283-8348</a></li>
+                        <li><i class="fa-solid fa-globe"></i><a href="http://tonysuperbadharrison.com" target="_blank"
+                                rel="noopener">tonysuperbadharrison.com</a></li>
                     </ul>
-
                     <h3 class="sf-col-title sf-col-title--hours">Hours</h3>
                     <ul class="sf-hours">
-                        <li>
-                            <span>Mon – Fri</span>
-                            <span>7:00 AM – 8:00 PM</span>
-                        </li>
-                        <li>
-                            <span>Saturday</span>
-                            <span>8:00 AM – 7:00 PM</span>
-                        </li>
-                        <li class="sf-hours-closed">
-                            <span>Sunday</span>
-                            <span>Closed</span>
-                        </li>
+                        <li><span>Mon – Fri</span><span>7:00 AM – 8:00 PM</span></li>
+                        <li><span>Saturday</span><span>8:00 AM – 7:00 PM</span></li>
+                        <li class="sf-hours-closed"><span>Sunday</span><span>Closed</span></li>
                     </ul>
                 </div>
-
-                <!-- Col 4: CTA -->
                 <div class="sf-col sf-col--cta">
                     <h3 class="sf-col-title">Start Your Journey</h3>
-                    <p class="sf-cta-text">
-                        Train with purpose. Build confidence. Join the SuperBad family today.
-                    </p>
+                    <p class="sf-cta-text">Train with purpose. Build confidence. Join the SuperBad family today.</p>
                     <a href="./contact-us.html" class="sf-cta-btn">Get Started</a>
                     <a href="./membership.html" class="sf-cta-link">View Membership Options →</a>
                 </div>
-
-            </div><!-- end sf-inner -->
-
-            <!-- Bottom bar -->
-            <div class="sf-bottom">
-                <p class="sf-copy">
-                    &copy; <span id="sfYear"></span> SuperBad Boxing Gym. Detroit, MI. All rights reserved.
-                </p>
-                <p class="sf-credit">
-                    Designed &amp; built by
-                    <span class="sf-credit-name">Galekwan Sango</span>
-                </p>
             </div>
-
+            <div class="sf-bottom">
+                <p class="sf-copy">&copy; <span id="sfYear"></span> SuperBad Boxing Gym. Detroit, MI. All rights
+                    reserved.</p>
+                <p class="sf-credit">Designed &amp; built by <span class="sf-credit-name">Galekwan Sango</span></p>
+            </div>
         </footer>
 
         <script>
-            // Auto-update copyright year
             const sfYear = document.getElementById('sfYear');
             if (sfYear) sfYear.textContent = new Date().getFullYear();
         </script>
 
-    </div>
+    </div><!-- end body-container -->
 
     <script src="../scripts/index.js"></script>
-    <script src="../scripts/coaches.js"></script>
-
+    <script src="../scripts/program-page.js"></script>
 </body>
 
 </html>

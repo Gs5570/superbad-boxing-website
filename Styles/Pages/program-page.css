@@ -1,0 +1,649 @@
+/* ═══════════════════════════════════════════
+   PROGRAMS PAGE — programs.css
+   Hero · Sticky anchor nav · 7 alternating
+   program sections · GoFundMe support block
+   · Orange CTA banner · Site footer
+═══════════════════════════════════════════ */
+
+:root {
+  --pp-orange: rgb(247, 105, 2);
+  --pp-orange-dark: rgb(200, 82, 0);
+  --pp-orange-light: rgba(247, 105, 2, 0.1);
+  --pp-black: #0d0d0d;
+  --pp-dark: #1a1a1a;
+  --pp-grey-section: #f4f4f4;
+  --pp-white: #ffffff;
+  --pp-text: #222;
+  --pp-text-muted: #666;
+  --pp-text-light: rgba(255, 255, 255, 0.65);
+}
+
+/* ── HERO ── */
+.pp-hero {
+  position: relative;
+  width: 100%;
+  height: calc(65vh - var(--header-h));
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/Media/group-program-inside-gym.avif');
+  background-size: cover;
+  background-position: center 35%;
+  overflow: hidden;
+}
+
+.pp-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0% /* rgba(247, 105, 2, 0.14) 100% */
+  );
+}
+
+.pp-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 24px;
+  max-width: 820px;
+}
+
+.pp-eyebrow {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pp-orange);
+  margin: 0 0 14px;
+}
+
+.pp-hero-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.9rem, 5.5vw, 4rem);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  margin: 0 0 18px;
+}
+
+.pp-accent {
+  color: var(--pp-orange);
+}
+
+.pp-hero-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.75;
+  margin: 0 0 32px;
+}
+
+.pp-hero-btn {
+  display: inline-block;
+  background-color: var(--pp-orange);
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 36px;
+  border-radius: 30px;
+  border: 2px solid var(--pp-orange);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.pp-hero-btn:hover {
+  background-color: transparent;
+  color: var(--pp-orange);
+  transform: translateY(-2px);
+}
+
+/* ── ANCHOR NAV ── */
+.pp-anchor-bar {
+  background-color: var(--pp-black);
+  border-bottom: 1px solid #2a2a2a;
+  padding: 14px 40px;
+  position: sticky;
+  top: var(--header-h);
+  z-index: 100;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.pp-anchor-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.pp-anchors {
+  display: flex;
+  gap: 8px;
+  min-width: max-content;
+}
+
+.pp-anchor-link {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 30px;
+  border: 1.5px solid #333;
+  color: #777;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.pp-anchor-link:hover {
+  border-color: var(--pp-orange);
+  color: var(--pp-orange);
+}
+
+.pp-anchor-link.is-active {
+  background-color: var(--pp-orange);
+  border-color: var(--pp-orange);
+  color: #fff;
+}
+
+/* ═══════════════════════════════════════════
+   PROGRAM SECTIONS
+═══════════════════════════════════════════ */
+
+/* Shared structure */
+.pp-program {
+  padding: 80px 40px;
+  scroll-margin-top: calc(
+    var(--header-h) + 56px
+  ); /* offset for sticky anchor bar */
+}
+
+.pp-program--light {
+  background-color: var(--pp-white);
+}
+.pp-program--grey {
+  background-color: var(--pp-grey-section);
+}
+.pp-program--dark {
+  background-color: var(--pp-dark);
+}
+
+.pp-program-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 72px;
+  align-items: center;
+}
+
+/* Reversed layout — image left, text right */
+.pp-program--reversed .pp-program-inner {
+  flex-direction: row-reverse;
+}
+
+/* Text side */
+.pp-program-text {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Category badge */
+.pp-program-badge {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pp-orange);
+  background-color: var(--pp-orange-light);
+  border: 1px solid rgba(247, 105, 2, 0.2);
+  padding: 4px 14px;
+  border-radius: 30px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.pp-program-badge--dark {
+  background-color: rgba(247, 105, 2, 0.15);
+  border-color: rgba(247, 105, 2, 0.3);
+}
+
+/* Title */
+.pp-program-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 900;
+  color: var(--pp-text);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.pp-program-title--white {
+  color: #fff;
+}
+
+/* Description */
+.pp-program-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--pp-text-muted);
+  margin: 0;
+}
+
+.pp-program-desc--light {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Checklist */
+.pp-program-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
+
+.pp-program-list li {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--pp-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pp-program-list li i {
+  color: var(--pp-orange);
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.pp-program-list--light li {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* CTA button */
+.pp-program-btn {
+  display: inline-block;
+  background-color: var(--pp-orange);
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  border-radius: 30px;
+  border: 2px solid var(--pp-orange);
+  width: fit-content;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.pp-program-btn:hover {
+  background-color: transparent;
+  color: var(--pp-orange);
+  transform: translateY(-2px);
+}
+
+.pp-program-btn--outline {
+  background-color: transparent;
+  color: var(--pp-orange);
+  border-color: var(--pp-orange);
+}
+
+.pp-program-btn--outline:hover {
+  background-color: var(--pp-orange);
+  color: #fff;
+}
+
+/* Image side */
+.pp-program-img-wrap {
+  flex: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  border-bottom: 4px solid var(--pp-orange);
+  flex-shrink: 0;
+}
+
+.pp-program-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.pp-program:hover .pp-program-img {
+  transform: scale(1.04);
+}
+
+/* ═══════════════════════════════════════════
+   GOFUNDME / SUPPORT SECTION
+═══════════════════════════════════════════ */
+.pp-support {
+  background-color: var(--pp-black);
+  padding: 80px 40px;
+}
+
+.pp-support-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.pp-support-text {
+  flex: 1.3;
+}
+
+.pp-support-eyebrow {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pp-orange);
+  margin: 0 0 10px;
+}
+
+.pp-support-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+
+.pp-support-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 28px;
+}
+
+/* Planned upgrades */
+.pp-upgrades {
+  margin-bottom: 28px;
+}
+
+.pp-upgrades-label {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pp-orange);
+  margin: 0 0 12px;
+}
+
+.pp-upgrades-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pp-upgrade-item {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pp-upgrade-item i {
+  color: var(--pp-orange);
+  font-size: 0.8rem;
+  width: 16px;
+  flex-shrink: 0;
+}
+
+/* Buttons */
+.pp-support-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.pp-gofundme-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #02a95c; /* GoFundMe green */
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border-radius: 30px;
+  border: 2px solid #02a95c;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.pp-gofundme-btn:hover {
+  background-color: transparent;
+  color: #02a95c;
+  transform: translateY(-2px);
+}
+
+.pp-support-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1.5px solid #444;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 30px;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.pp-support-secondary-btn:hover {
+  border-color: var(--pp-orange);
+  color: var(--pp-orange);
+}
+
+.pp-support-note {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
+  font-style: italic;
+}
+
+/* Impact stats */
+.pp-support-stats {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  align-self: stretch;
+  border: 1px solid #222;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pp-stat {
+  background-color: #111;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  border: 1px solid #1e1e1e;
+  transition: background-color 0.2s ease;
+}
+
+.pp-stat:hover {
+  background-color: #161616;
+}
+
+.pp-stat-number {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 900;
+  color: var(--pp-orange);
+  line-height: 1;
+}
+
+.pp-stat-label {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.4;
+}
+
+/* ── CTA BANNER ── */
+.pp-cta-banner {
+  background-color: var(--pp-orange);
+  padding: 64px 40px;
+  text-align: center;
+}
+
+.pp-cta-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 10px;
+}
+
+.pp-cta-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 28px;
+}
+
+.pp-cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--pp-orange);
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.88rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 40px;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.pp-cta-btn:hover {
+  background: transparent;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .pp-program-inner,
+  .pp-program--reversed .pp-program-inner,
+  .pp-support-inner {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .pp-program-img {
+    height: 280px;
+  }
+  .pp-support-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .pp-anchor-bar {
+    padding: 12px 16px;
+  }
+  .pp-program {
+    padding: 52px 24px;
+  }
+  .pp-support {
+    padding: 52px 24px;
+  }
+  .pp-cta-banner {
+    padding: 48px 24px;
+  }
+
+  .pp-program-list {
+    grid-template-columns: 1fr;
+  }
+  .pp-program-img {
+    height: 220px;
+  }
+
+  .pp-support-stats {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .pp-support-btns {
+    flex-direction: column;
+  }
+  .pp-gofundme-btn,
+  .pp-support-secondary-btn {
+    justify-content: center;
+  }
+}

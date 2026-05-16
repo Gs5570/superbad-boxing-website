@@ -7,62 +7,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- icon link:https://cdnjs.com/libraries/font-awesome/6.7.2 | if everbroken use the link to replace-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
     <link
         href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
     <meta name="author" content="Galekwan Sango" />
-
-    <!-- The order of the styles matters: -->
-
-    <!-- general style -->
     <link rel="stylesheet" href="../Styles/style.css" />
-
-    <!-- responsive break points -->
     <link rel="stylesheet" href="../Styles/responsiveBreak.css" />
-
-    <!-- carousel style -->
-    <link rel="stylesheet" href="../Styles/carousel.css" />
-
-    <!-- service section -->
-    <link rel="stylesheet" href="../Styles/services.css" />
-
-    <!-- Mission statement section -->
-    <link rel="stylesheet" href="../Styles/mission-statement.css" />
-    <!-- coaches section -->
-    <link rel="stylesheet" href="../Styles/coaches.css" />
-
-    <!-- footer-section -->
-    <link rel="stylesheet" href="/Styles/footer.css" />
-    <title>Gallery</title>
+    <link rel="stylesheet" href="../Styles/Pages/tribute-page.css" />
+    <link rel="stylesheet" href="../Styles/footer.css" />
+    <title>Tribute — SuperBad Boxing</title>
 </head>
 
 <body>
     <div class="body-container">
+
+        <!-- ── HEADER ── -->
         <div class="header-container">
-            <!-- Logo visible in header bar always -->
             <a href="../index.html"><img id="site-logo" src="../Media/logo.png" alt="site logo" /></a>
-
             <nav class="nav-bar-container">
-                <!-- Hidden checkbox — CSS-only toggle -->
                 <input class="side-menu" type="checkbox" id="side-menu" />
-
-                <!-- Hamburger / X — fixed top-right on mobile -->
-                <label class="hamb" for="side-menu">
-                    <span class="hamb-line"></span>
-                </label>
-
-                <!-- Nav overlay -->
+                <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
                 <ul class="nav-items-container">
-                    <!-- Logo shown inside the overlay on mobile -->
                     <a href="../index.html"><img class="overlay-logo" src="../Media/logo.png" alt="site logo" /></a>
-
                     <li class="nav-items"><a href="./about.html">About</a></li>
                     <li class="nav-items"><a href="./coaches.html">Coaches</a></li>
                     <li class="nav-items"><a href="./fighters.html">Fighters</a></li>
@@ -75,45 +44,218 @@
                 </ul>
             </nav>
         </div>
-        <div class="content-container"></div>
 
-        <!-- ════════════════════════════════════════════
-                SUPERBAD BOXING GYM — SITE FOOTER
-                Copy this footer block into every page,
-                replacing the existing <footer> tag.
-                Adjust ../  vs ./  paths based on page depth.
-           ════════════════════════════════════════════ -->
+        <div class="content-container">
 
+            <!-- ── HERO ── -->
+            <section class="tp-hero">
+                <div class="tp-hero-glow"></div>
+                <div class="tp-hero-stars tp-hero-stars--top">✦ ✦ ✦</div>
+                <div class="tp-hero-content">
+                    <p class="tp-eyebrow">Forever In Our Hearts</p>
+                    <h1 class="tp-hero-title">Honoring The Ones Who<br />Built The <span
+                            class="tp-gold">Foundation</span></h1>
+                    <p class="tp-hero-quote">
+                        "Their legacy is forever part of this gym."
+                    </p>
+                    <p class="tp-hero-sub">
+                        SuperBad Boxing Gym was not built overnight. It was built through sacrifice,
+                        discipline, mentorship, and the vision of people who dedicated their lives to
+                        boxing, community, and the development of young athletes in Detroit.
+                    </p>
+                </div>
+                <div class="tp-hero-stars tp-hero-stars--bottom">✦ ✦ ✦</div>
+            </section>
+
+            <!-- ── LEGACY INTRO ── -->
+            <section class="tp-legacy">
+                <div class="tp-legacy-inner">
+                    <p class="tp-section-eyebrow">A Legacy Passed Down</p>
+                    <h2 class="tp-section-title">Built Through <span class="tp-gold">Generations</span></h2>
+                    <div class="tp-legacy-divider"></div>
+                    <p class="tp-legacy-body">
+                        Detroit boxing has always been more than a sport, it has been family, mentorship,
+                        survival, and opportunity. The foundation of SuperBad Boxing Gym was created by men
+                        who believed boxing could change lives and guide young people toward discipline,
+                        confidence, and purpose.
+                    </p>
+                    <p class="tp-legacy-body">
+                        Long before championships, recognition, or titles, there were fathers, trainers,
+                        mentors, and community leaders putting in countless hours inside small gyms, teaching
+                        lessons that extended far beyond the ring.
+                    </p>
+                    <p class="tp-legacy-body tp-legacy-body--italic">
+                        Their vision continues to inspire everything we do today.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ── TRIBUTE: ALI SALAAM (Primary) ── -->
+            <section class="tp-tribute-section">
+                <article class="tp-card tp-card--primary">
+                    <div class="tp-card-gold-line tp-card-gold-line--top"></div>
+
+                    <div class="tp-card-inner">
+                        <!-- Portrait -->
+                        <div class="tp-card-portrait-wrap">
+                            <div class="tp-card-portrait">
+                                <img src="../Media/ali salaam.webp" alt="Ali Salaam" class="tp-card-portrait-img" />
+                                <div class="tp-card-halo"></div>
+                            </div>
+                            <span class="tp-in-memoriam">✦ In Memoriam</span>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="tp-card-content">
+                            <span class="tp-card-badge">Tribute — Ali Salaam</span>
+                            <h2 class="tp-card-name">Ali <span class="tp-gold">Salaam</span></h2>
+                            <p class="tp-card-role">Father · Trainer · Mentor · Builder of Champions</p>
+                            <p class="tp-card-subtitle">The Man Who Started It All</p>
+
+                            <p class="tp-card-body">
+                                Ali Salaam was more than a boxing trainer. He was a mentor, teacher, father,
+                                and builder of champions. He dedicated his life to developing fighters, guiding
+                                youth, and teaching discipline through boxing.
+                            </p>
+                            <p class="tp-card-body">
+                                As the father of Tony Harrison and L.J. Harrison, he laid the foundation that
+                                would later become SuperBad Boxing Gym. Through his leadership, sacrifices, and
+                                commitment to the sport, he helped shape not only his sons, but countless young
+                                athletes throughout Detroit.
+                            </p>
+                            <p class="tp-card-body">
+                                He believed boxing was about more than fighting. It was about character,
+                                structure, accountability, and becoming stronger mentally and spiritually.
+                            </p>
+
+                            <blockquote class="tp-card-quote">
+                                "The lessons he taught continue to live through the gym, the fighters,
+                                and the culture he helped create. Every athlete who trains at SuperBad
+                                Boxing Gym is part of the legacy he started."
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="tp-card-gold-line tp-card-gold-line--bottom"></div>
+                </article>
+            </section>
+
+            <!-- ── TRIBUTE: COACH BASS (Secondary) ── -->
+            <section class="tp-tribute-section tp-tribute-section--offset">
+                <article class="tp-card tp-card--secondary">
+                    <div class="tp-card-gold-line tp-card-gold-line--top"></div>
+
+                    <div class="tp-card-inner">
+                        <!-- Portrait -->
+                        <div class="tp-card-portrait-wrap">
+                            <div class="tp-card-portrait tp-card-portrait--sm">
+                                <img src="../Media/coach-bass-4.webp" alt="Coach Bass" class="tp-card-portrait-img" />
+                                <div class="tp-card-halo"></div>
+                            </div>
+                            <span class="tp-in-memoriam">✦ In Memoriam</span>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="tp-card-content">
+                            <span class="tp-card-badge">Tribute — Coach Bass</span>
+                            <h2 class="tp-card-name">Coach <span class="tp-gold">Bass</span></h2>
+                            <p class="tp-card-role">Coach · Mentor · Leader</p>
+                            <p class="tp-card-subtitle">A Coach. A Mentor. A Leader.</p>
+
+                            <p class="tp-card-body">
+                                Coach Bass was respected for his passion, dedication, and commitment to
+                                developing fighters and mentoring young athletes. His impact reached far beyond
+                                boxing techniques and training sessions. He helped shape mindsets, build
+                                confidence, and inspire discipline in everyone around him.
+                            </p>
+                            <p class="tp-card-body">
+                                Known for his wisdom, toughness, and genuine care for fighters, Coach Bass
+                                played an important role in Detroit's boxing culture and influenced multiple
+                                athletes throughout his career.
+                            </p>
+                            <p class="tp-card-body">
+                                Though he is no longer with us, his energy, teachings, and influence remain
+                                part of the spirit of the gym. His contribution helped strengthen the foundation
+                                that continues to guide future generations of fighters today.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tp-card-gold-line tp-card-gold-line--bottom"></div>
+                </article>
+            </section>
+
+            <!-- ── THEIR VISION LIVES ON ── -->
+            <section class="tp-vision">
+                <div class="tp-vision-glow"></div>
+                <div class="tp-vision-inner">
+                    <p class="tp-section-eyebrow">More Than Boxing</p>
+                    <h2 class="tp-section-title">Their Vision <span class="tp-gold">Lives On</span></h2>
+                    <div class="tp-legacy-divider"></div>
+                    <p class="tp-vision-body">
+                        This tribute is not only about remembering individuals. It is about continuing
+                        their mission.
+                    </p>
+                    <div class="tp-vision-lines">
+                        <p class="tp-vision-line">Every young athlete mentored.</p>
+                        <p class="tp-vision-line">Every fighter developed.</p>
+                        <p class="tp-vision-line">Every lesson taught.</p>
+                        <p class="tp-vision-line">Every life changed through boxing.</p>
+                    </div>
+                    <p class="tp-vision-closing">
+                        That is the true legacy they left behind.
+                    </p>
+                    <p class="tp-vision-body">
+                        At SuperBad Boxing Gym, we honor them by continuing to build a positive environment
+                        where discipline, hard work, mentorship, and opportunity can change lives for
+                        generations to come.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ── FOREVER IN OUR HEARTS (Closing) ── -->
+            <section class="tp-closing">
+                <div class="tp-closing-glow"></div>
+                <div class="tp-closing-ornament tp-closing-ornament--top">✦ ✦ ✦</div>
+                <div class="tp-closing-inner">
+                    <p class="tp-section-eyebrow">Legends Never Leave The Gym</p>
+                    <h2 class="tp-closing-title">Forever In Our <span class="tp-gold">Hearts</span></h2>
+                    <div class="tp-legacy-divider"></div>
+                    <div class="tp-closing-lines">
+                        <p>Their voices live in the lessons passed down.</p>
+                        <p>Their spirit lives in the fighters they inspired.</p>
+                        <p>Their vision lives in the foundation they built.</p>
+                    </div>
+                    <p class="tp-closing-final">
+                        And their legacy will forever remain part of SuperBad Boxing Gym
+                        and the city of Detroit.
+                    </p>
+                </div>
+                <div class="tp-closing-ornament tp-closing-ornament--bottom">✦ ✦ ✦</div>
+            </section>
+
+        </div><!-- end content-container -->
+
+        <!-- ── FOOTER ── -->
         <footer class="site-footer">
             <div class="sf-inner">
-
-                <!-- Col 1: Brand -->
                 <div class="sf-brand">
-                    <a href="../index.html">
-                        <img src="../Media/logo.png" alt="SuperBad Boxing Gym logo" class="sf-logo" />
-                    </a>
+                    <a href="../index.html"><img src="../Media/logo.png" alt="SuperBad Boxing Gym logo"
+                            class="sf-logo" /></a>
                     <p class="sf-tagline">Built in Detroit. Driven by Excellence.</p>
-                    <p class="sf-desc">
-                        SuperBad Boxing Gym is more than a place to train — it is a community
-                        built on discipline, hard work, and the fighting spirit of Detroit.
-                    </p>
+                    <p class="sf-desc">SuperBad Boxing Gym is more than a place to train. It is a community built on
+                        discipline, hard work, and the fighting spirit of Detroit.</p>
                     <div class="sf-socials">
-                        <a href="#" aria-label="Facebook" class="sf-social-link">
-                            <i class="fa-brands fa-square-facebook"></i>
-                        </a>
-                        <a href="#" aria-label="Instagram" class="sf-social-link">
-                            <i class="fa-brands fa-square-instagram"></i>
-                        </a>
-                        <a href="#" aria-label="Twitter / X" class="sf-social-link">
-                            <i class="fa-brands fa-square-twitter"></i>
-                        </a>
-                        <a href="#" aria-label="YouTube" class="sf-social-link">
-                            <i class="fa-brands fa-square-youtube"></i>
-                        </a>
+                        <a href="#" aria-label="Facebook" class="sf-social-link"><i
+                                class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#" aria-label="Instagram" class="sf-social-link"><i
+                                class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#" aria-label="Twitter / X" class="sf-social-link"><i
+                                class="fa-brands fa-square-twitter"></i></a>
+                        <a href="#" aria-label="YouTube" class="sf-social-link"><i
+                                class="fa-brands fa-square-youtube"></i></a>
                     </div>
                 </div>
-
-                <!-- Col 2: Quick Links -->
                 <div class="sf-col">
                     <h3 class="sf-col-title">Quick Links</h3>
                     <ul class="sf-links">
@@ -127,80 +269,44 @@
                         <li><a href="./contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
-
-                <!-- Col 3: Contact Info -->
                 <div class="sf-col">
                     <h3 class="sf-col-title">Contact</h3>
                     <ul class="sf-contact-list">
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>8701 Puritan Ave<br />Detroit, MI 48238</span>
+                        <li><i class="fa-solid fa-location-dot"></i><span>8701 Puritan Ave<br />Detroit, MI 48238</span>
                         </li>
-                        <li>
-                            <i class="fa-solid fa-phone"></i>
-                            <a href="tel:+13132838348">(313) 283-8348</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-globe"></i>
-                            <a href="http://tonysuperbadharrison.com" target="_blank" rel="noopener">
-                                tonysuperbadharrison.com
-                            </a>
-                        </li>
+                        <li><i class="fa-solid fa-phone"></i><a href="tel:+13132838348">(313) 283-8348</a></li>
+                        <li><i class="fa-solid fa-globe"></i><a href="http://tonysuperbadharrison.com" target="_blank"
+                                rel="noopener">tonysuperbadharrison.com</a></li>
                     </ul>
-
                     <h3 class="sf-col-title sf-col-title--hours">Hours</h3>
                     <ul class="sf-hours">
-                        <li>
-                            <span>Mon – Fri</span>
-                            <span>7:00 AM – 8:00 PM</span>
-                        </li>
-                        <li>
-                            <span>Saturday</span>
-                            <span>8:00 AM – 7:00 PM</span>
-                        </li>
-                        <li class="sf-hours-closed">
-                            <span>Sunday</span>
-                            <span>Closed</span>
-                        </li>
+                        <li><span>Mon – Fri</span><span>7:00 AM – 8:00 PM</span></li>
+                        <li><span>Saturday</span><span>8:00 AM – 7:00 PM</span></li>
+                        <li class="sf-hours-closed"><span>Sunday</span><span>Closed</span></li>
                     </ul>
                 </div>
-
-                <!-- Col 4: CTA -->
                 <div class="sf-col sf-col--cta">
                     <h3 class="sf-col-title">Start Your Journey</h3>
-                    <p class="sf-cta-text">
-                        Train with purpose. Build confidence. Join the SuperBad family today.
-                    </p>
+                    <p class="sf-cta-text">Train with purpose. Build confidence. Join the SuperBad family today.</p>
                     <a href="./contact-us.html" class="sf-cta-btn">Get Started</a>
                     <a href="./membership.html" class="sf-cta-link">View Membership Options →</a>
                 </div>
-
-            </div><!-- end sf-inner -->
-
-            <!-- Bottom bar -->
-            <div class="sf-bottom">
-                <p class="sf-copy">
-                    &copy; <span id="sfYear"></span> SuperBad Boxing Gym. Detroit, MI. All rights reserved.
-                </p>
-                <p class="sf-credit">
-                    Designed &amp; built by
-                    <span class="sf-credit-name">Galekwan Sango</span>
-                </p>
             </div>
-
+            <div class="sf-bottom">
+                <p class="sf-copy">&copy; <span id="sfYear"></span> SuperBad Boxing Gym. Detroit, MI. All rights
+                    reserved.</p>
+                <p class="sf-credit">Designed &amp; built by <span class="sf-credit-name">Galekwan Sango</span></p>
+            </div>
         </footer>
 
         <script>
-            // Auto-update copyright year
             const sfYear = document.getElementById('sfYear');
             if (sfYear) sfYear.textContent = new Date().getFullYear();
         </script>
 
-    </div>
+    </div><!-- end body-container -->
 
     <script src="../scripts/index.js"></script>
-    <script src="../scripts/coaches.js"></script>
-
 </body>
 
 </html>
