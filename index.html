@@ -1,524 +1,523 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- icon link:https://cdnjs.com/libraries/font-awesome/6.7.2 | if everbroken use the link to replace-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- icon link:https://cdnjs.com/libraries/font-awesome/6.7.2 | if everbroken use the link to replace-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
-    <meta name="author" content="Galekwan Sango" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+        <meta name="author" content="Galekwan Sango" />
 
-    <!-- The order of the styles matters: -->
+        <!-- The order of the styles matters: -->
 
-    <!-- general style -->
-    <link rel="stylesheet" href="./Styles/style.css" />
+        <!-- general style -->
+        <link rel="stylesheet" href="./Styles/style.css" />
 
-    <!-- responsive break points -->
-    <link rel="stylesheet" href="./Styles/responsiveBreak.css" />
+        <!-- responsive break points -->
+        <link rel="stylesheet" href="./Styles/responsiveBreak.css" />
 
-    <!-- carousel style -->
-    <link rel="stylesheet" href="./Styles/carousel.css" />
+        <!-- carousel style -->
+        <link rel="stylesheet" href="./Styles/carousel.css" />
 
-    <!-- service section -->
-    <link rel="stylesheet" href="./Styles/services.css" />
+        <!-- service section -->
+        <link rel="stylesheet" href="./Styles/services.css" />
 
-    <!-- Mission statement section -->
-    <link rel="stylesheet" href="./Styles/mission-statement.css" />
-    <!-- coaches section -->
-    <link rel="stylesheet" href="./Styles/coaches.css" />
+        <!-- Mission statement section -->
+        <link rel="stylesheet" href="./Styles/mission-statement.css" />
+        <!-- coaches section -->
+        <link rel="stylesheet" href="./Styles/coaches.css" />
 
-    <!-- footer section -->
-    <link rel="stylesheet" href="/Styles/footer.css" />
-    <title>SuperBad</title>
-</head>
+        <!-- footer section -->
+        <link rel="stylesheet" href="/Styles/footer.css" />
+        <title>SuperBad</title>
+    </head>
 
-<body>
-    <div class="body-container">
-        <div class="header-container">
-            <!-- Logo visible in header bar always -->
-            <a href="./index.html"><img id="site-logo" src="./Media/logo.png" alt="site logo" /></a>
+    <body>
+        <div class="body-container">
+            <div class="header-container">
+                <!-- Logo visible in header bar always -->
+                <a href="./index.html"><img id="site-logo" src="./Media/logo.png" alt="site logo" /></a>
 
-            <nav class="nav-bar-container">
-                <!-- Hidden checkbox — CSS-only toggle -->
-                <input class="side-menu" type="checkbox" id="side-menu" />
+                <nav class="nav-bar-container">
+                    <!-- Hidden checkbox — CSS-only toggle -->
+                    <input class="side-menu" type="checkbox" id="side-menu" />
 
-                <!-- Hamburger / X — fixed top-right on mobile -->
-                <label class="hamb" for="side-menu">
-                    <span class="hamb-line"></span>
-                </label>
+                    <!-- Hamburger / X — fixed top-right on mobile -->
+                    <label class="hamb" for="side-menu">
+                        <span class="hamb-line"></span>
+                    </label>
 
-                <!-- Nav overlay -->
-                <ul class="nav-items-container">
-                    <!-- Logo shown inside the overlay on mobile -->
-                    <a href="./index.html"><img class="overlay-logo" src="./Media/logo.png" alt="site logo" /></a>
+                    <!-- Nav overlay -->
+                    <ul class="nav-items-container">
+                        <!-- Logo shown inside the overlay on mobile -->
+                        <a href="./index.html"><img class="overlay-logo" src="./Media/logo.png" alt="site logo" /></a>
 
-                    <li class="nav-items"><a href="./Pages/about.html">About</a></li>
-                    <li class="nav-items"><a href="./Pages/coaches.html">Coaches</a></li>
-                    <li class="nav-items"><a href="./Pages/fighters.html">Fighters</a></li>
-                    <li class="nav-items"><a href="./Pages/gallery.html">Gallery</a></li>
-                    <li class="nav-items"><a href="./Pages/membership.html">Membership</a></li>
-                    <li class="nav-items"><a href="./Pages/events.html">Events</a></li>
-                    <li class="nav-items"><a href="./Pages/program.html">Program</a></li>
-                    <li class="nav-items"><a href="./Pages/tribute.html">Tribute</a></li>
-                    <li class="nav-items"><a href="./Pages/contact-us.html">Contact us</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="content-container">
-            <div class="carousel">
-                <input type="radio" id="trigger1" name="slider" />
-                <label for="trigger1"><span class="sr-only">Slide 1 of 5. A family photo of LJ, Tony and their dad
-                        .</span></label>
-                <div class="slide bg1"></div>
-
-                <input type="radio" id="trigger2" name="slider" checked autofocus />
-                <label for="trigger2"><span class="sr-only">Slide 2 of 5. A photo a sparring session
-                    </span></label>
-                <div class="slide bg2"></div>
-
-                <input type="radio" id="trigger3" name="slider" />
-                <label for="trigger3"><span class="sr-only">Slide 3 of 5. A photo a sparring session .</span></label>
-                <div class="slide bg3"></div>
-
-                <input type="radio" id="trigger4" name="slider" />
-                <label for="trigger4"><span class="sr-only">Slide 4 of 5. A photo of a people watching
-                        sparring.</span></label>
-                <div class="slide bg4"></div>
-
-                <input type="radio" id="trigger5" name="slider" />
-                <label for="trigger5"><span class="sr-only">Slide 5 of 5. A photo of a kid boxing.</span></label>
-                <div class="slide bg5"></div>
+                        <li class="nav-items"><a href="./Pages/about.html">About</a></li>
+                        <li class="nav-items"><a href="./Pages/coaches.html">Coaches</a></li>
+                        <li class="nav-items"><a href="./Pages/fighters.html">Fighters</a></li>
+                        <li class="nav-items"><a href="./Pages/gallery.html">Gallery</a></li>
+                        <li class="nav-items"><a href="./Pages/membership.html">Membership</a></li>
+                        <li class="nav-items"><a href="./Pages/events.html">Events</a></li>
+                        <li class="nav-items"><a href="./Pages/program.html">Program</a></li>
+                        <li class="nav-items"><a href="./Pages/tribute.html">Tribute</a></li>
+                        <li class="nav-items"><a href="./Pages/contact-us.html">Contact us</a></li>
+                    </ul>
+                </nav>
             </div>
+            <div class="content-container">
+                <div class="carousel">
+                    <input type="radio" id="trigger1" name="slider" />
+                    <label for="trigger1"><span class="sr-only">Slide 1 of 5. A family photo of LJ, Tony and their dad
+                            .</span></label>
+                    <div class="slide bg1"></div>
 
-            <div class="services-container">
-                <div id="service-title-container">
-                    <p id="service-title">OUR SERVICES</p>
+                    <input type="radio" id="trigger2" name="slider" checked autofocus />
+                    <label for="trigger2"><span class="sr-only">Slide 2 of 5. A photo a sparring session
+                        </span></label>
+                    <div class="slide bg2"></div>
+
+                    <input type="radio" id="trigger3" name="slider" />
+                    <label for="trigger3"><span class="sr-only">Slide 3 of 5. A photo a sparring session .</span></label>
+                    <div class="slide bg3"></div>
+
+                    <input type="radio" id="trigger4" name="slider" />
+                    <label for="trigger4"><span class="sr-only">Slide 4 of 5. A photo of a people watching
+                            sparring.</span></label>
+                    <div class="slide bg4"></div>
+
+                    <input type="radio" id="trigger5" name="slider" />
+                    <label for="trigger5"><span class="sr-only">Slide 5 of 5. A photo of a kid boxing.</span></label>
+                    <div class="slide bg5"></div>
                 </div>
-                <p id="service-description">
-                    We offer a wide range of programs to help our members succeed. All
-                    ages, levels, and backgrounds are welcome to join.
-                </p>
 
-                <div class="service-category-container">
-                    <div class="service">
-                        <div class="service-img-container">
-                            <img class="service-image" src="./Media/hitting-bad-unsplash.jpg" alt="boxing-service" />
-                        </div>
-
-                        <p class="service-name">BOXING</p>
-                        <p class="service-details">
-                            Train like a fighter in an authentic Detroit boxing environment built on discipline, hard
-                            work, and championship
-                            mentality. Our Boxing Training program is designed for all skill levels — from beginners
-                            learning the fundamentals to
-                            amateur and professional fighters preparing for competition.
-
-                            At SuperBad Boxing Gym, members develop real boxing skills including footwork, defense,
-                            combinations, ring IQ,
-                            conditioning, and mental toughness through structured, high-energy training sessions led by
-                            experienced coaches and
-                            fighters.
-
-                            Whether your goal is to compete, get in shape, build confidence, or challenge yourself
-                            mentally and physically, our
-                            boxing program pushes you to become stronger inside and outside the ring.
+                <div class="services-container">
+                    <div id="service-title-container">
+                        <p id="service-title">OUR SERVICES</p>
                     </div>
-                    <div class="service">
-                        <div class="service-img-container">
-                            <img class="service-image" src="./Media/strength-&-conditioning-unsplash.jpg"
-                                alt="boxing-service" />
-                        </div>
+                    <p id="service-description">
+                        We offer a wide range of programs to help our members succeed. All
+                        ages, levels, and backgrounds are welcome to join.
+                    </p>
 
-                        <p class="service-name">STRENGTH AND CONDITIONING</p>
-                        <p class="service-details">
-                            Our Strength & Conditioning program is built to develop explosive power, speed, endurance,
-                            and total-body athleticism.
-                            Inspired by elite-level boxing and sports performance training, these sessions are designed
-                            to push your physical and
-                            mental limits while helping you become stronger, faster, and more resilient.
-
-                            Whether you’re an athlete preparing for competition or someone looking to improve overall
-                            fitness, lose weight, or build
-                            confidence, our coaches create an intense and motivating environment focused on real
-                            results.
-
-                            Every workout combines functional strength training, boxing conditioning, agility drills,
-                            and high-intensity exercises
-                            to maximize performance and help you reach your goals.
-                        </p>
-                    </div>
-                    <div class="service">
-                        <div class="service-img-container"><img class="service-image"
-                                src="./Media/private-session-splash.jpg" alt="boxing-service" /></div>
-
-                        <p class="service-name">PRIVATE LESSONS</p>
-                        <p class="service-details">
-                            Take your training to the next level with personalized coaching tailored specifically to
-                            your goals. Our Private Lessons
-                            program provides focused, one-on-one instruction designed to accelerate your progress and
-                            help you train smarter,
-                            harder, and more effectively.
-
-                            Whether you are a beginner learning the basics, an athlete preparing for competition, or
-                            someone looking to improve
-                            fitness and confidence, our experienced coaches create customized training sessions built
-                            around your individual needs
-                            and performance level.
-
-                            Train directly with knowledgeable boxing coaches in a championship-driven environment that
-                            emphasizes technique,
-                            discipline, conditioning, and personal growth.
-                        </p>
-                    </div>
-                </div>
-                <div class="Mission-statement-container">
-                    <h1>Mission Statement</h1>
-                    <div class="mission-item">
-                        <div class="mission-item-title">
-                            <h2>Who we are?</h2>
-                            <p class="mission-description">
-                                At <span class="mission-word-color">SuperBad Boxing Gym</span>, we are more than a
-                                boxing gym — we are a
-                                Detroit-born family and community dedicated to building
-                                champions inside and outside the ring. Founded by professional fighters with deep roots
-                                in the city, we use boxing as a
-                                tool to develop discipline, confidence, leadership, and resilience in people of all
-                                ages. Inspired by Detroit’s fighting
-                                spirit and legendary boxing culture, we strive to create an environment where hard work,
-                                respect, and accountability
-                                shape the next generation.
-                            </p>
-                        </div>
-                        <div class="mission-item-title">
-                            <h2>Why People Choose Us?</h2>
-                            <p class="mission-description">
-                                People choose <span class="mission-word-color">SuperBad Boxing Gym</span> because we
-                                combine elite-level boxing knowledge with a
-                                genuine family atmosphere.
-                                Whether someone is training to compete, get in shape, build confidence, or simply find
-                                direction, our gym provides a
-                                supportive environment where everyone is pushed to grow. Our members train alongside
-                                champions, experienced coaches, and
-                                motivated athletes who inspire one another daily. We are known for our authentic boxing
-                                culture, strong mentorship, and
-                                commitment to helping every individual reach their full potential
-                            </p>
-                        </div>
-                        <div class="mission-item-title">
-                            <h2>Our Mission</h2>
-                            <p class="mission-description">
-                                Our mission is to empower the youth and community of Detroit through boxing, fitness,
-                                mentorship, and opportunity. We
-                                aim to build champions in life before champions in the ring by teaching discipline,
-                                mental toughness, self-respect, and
-                                perseverance. Through structured training, guidance, and positive leadership, we seek to
-                                create a safe and motivating
-                                environment where individuals can transform their lives and pursue greatness both
-                                athletically and personally
-                            </p>
-                        </div>
-                        <div class="mission-item-title">
-                            <h2>Our Team</h2>
-                            <p class="mission-description">
-                                Our team is led by experienced fighters, trainers, and mentors who understand the
-                                dedication required to succeed at the
-                                highest level. Co-founded by Tony Harrison and L.J. Harrison, our coaches bring
-                                real-world experience, passion, and
-                                mentorship to every athlete who walks through our doors. We believe in leading by
-                                example and creating strong
-                                relationships with our members through encouragement, accountability, and hard work.
-                            </p>
-                        </div>
-                        <div class="mission-item-title">
-                            <h2>What We Offer:</h2>
-                            <p class="mission-description">
-                                At <span class="mission-word-color">SuperBad Boxing Gym</span>
-
-                            </p>
-
-                            <ul class="mission-description">
-                                <li>Elite boxing training for beginners, amateurs, and professional fighters</li>
-                                <li>Youth development and mentorship programs</li>
-                                <li>Strength and conditioning</li>
-                                <li>Sparring and competition preparation</li>
-                                <li>Fitness and weight-loss boxing programs</li>
-                                <li>Personal training and athlete developmen</li>
-                                <li>A motivating community focused on growth, discipline, and excellence</li>
-                            </ul>
-                            <p id="mission-last-par" class="mission-description">Our goal is to provide every member —
-                                regardless of age or
-                                experience — with the tools,
-                                coaching, and environment needed
-                                to become stronger mentally, physically, and emotionally.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="coaches-section-container">
-                <h2>OUR COACHES:</h2>
-                <!-- carousel button -->
-                <button type="button" class="coach-carousel-arrow coach-carousel-arrow--prev"> <i
-                        class="fa-solid fa-circle-chevron-left"></i></button>
-                <button type="button" class="coach-carousel-arrow coach-carousel-arrow--next"> <i
-                        class="fa-solid fa-circle-chevron-right"></i></button>
-                <!-- carousel container -->
-                <div class="coach-items-container">
-                    <!-- carousel slide -->
-                    <div class="coach-items">
-                        <img src="./Media/LJ-profile-img.png" class="coach-img" alt="coach profile picture" />
-                        <p class="coach-name">L.J Harrison</p>
-                        <div class="social-media-container">
-                            <i class="fa-brands fa-square-facebook"></i>
-                            <i class="fa-brands fa-x-twitter"></i>
-                            <i class="fa-brands fa-square-instagram"></i>
-                            <i class="fa-solid fa-envelope"></i>
-                            <i class="fa-solid fa-square-phone"></i>
-                        </div>
-                    </div>
-                    <div class="coach-items">
-                        <img src="./Media/LJ-profile-img.png" class="coach-img" alt="coach profile picture" />
-                        <p class="coach-name">Tony Harrison</p>
-                        <div class="social-media-container">
-                            <i class="fa-brands fa-square-facebook"></i>
-                            <i class="fa-brands fa-x-twitter"></i>
-                            <i class="fa-brands fa-square-instagram"></i>
-                            <i class="fa-solid fa-envelope"></i>
-                            <i class="fa-solid fa-square-phone"></i>
-                        </div>
-                    </div>
-                    <div class="coach-items">
-                        <img src="./Media/LJ-profile-img.png" class="coach-img" alt="coach profile picture" />
-                        <p class="coach-name">Coach Name</p>
-                        <div class="social-media-container">
-                            <i class="fa-brands fa-square-facebook"></i>
-                            <i class="fa-brands fa-x-twitter"></i>
-                            <i class="fa-brands fa-square-instagram"></i>
-                            <i class="fa-solid fa-envelope"></i>
-                            <i class="fa-solid fa-square-phone"></i>
-                        </div>
-                    </div>
-                    <div class="coach-items">
-                        <img src="./Media/LJ-profile-img.png" class="coach-img" alt="coach profile picture" />
-                        <p class="coach-name">Tony Harrison</p>
-                        <div class="social-media-container">
-                            <i class="fa-brands fa-square-facebook"></i>
-                            <i class="fa-brands fa-x-twitter"></i>
-                            <i class="fa-brands fa-square-instagram"></i>
-                            <i class="fa-solid fa-envelope"></i>
-                            <i class="fa-solid fa-square-phone"></i>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="contact-us-container">
-                <h2 id="contact-us-title">Contact-us</h2>
-                <div class="hour-of-operation-form-container">
-                    <div class="contact-us-form-container">
-                        <form class="contact-form">
-                            <div class="form-input-label-container">
-                                <div class="form-input-container">
-                                    <label for="full-name-input-container">
-                                        <i class="fa-solid fa-user"></i>
-                                    </label>
-                                    <input class="label-input" type="text" name="full-name" id="name"
-                                        placeholder="full-name" required />
-                                </div>
-                                <div class="form-input-container">
-                                    <label for="email">
-                                        <i class="fa-solid fa-envelope"></i>
-                                    </label>
-                                    <input class="label-input" type="text" name="email" id="email" placeholder="email"
-                                        required />
-                                </div>
-                                <div class="form-input-container">
-                                    <textarea id="formMessage" class="form-message-box" rows="7"
-                                        placeholder="   Message..."></textarea>
-                                </div>
-                            </div>
-                            <button id="contact-btn" type="button">send</button>
-                        </form>
-                    </div>
-                    <div class="contact-us-info-container">
-                        <h2 id="get-in-touch-title">Get in touch with SuperBad</h2>
-                        <p class="contact-text">
-                            Whether you're ready to take your first step into boxing or get in shape, or have any
-                            questions about our classes, training
-                            programs, or memberships, we're here to help.
-                        </p>
-                        <div class="gym-contact-info-container">
-                            <div class="gym-contact-icon-info-container">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <div class="contact-icon-items">
-                                    <h3>Gym Location:</h3>
-                                    <p>8701 Puritan Ave, Detroit, MI 48238</p>
-                                </div>
-                            </div>
-                            <div class="gym-contact-icon-info-container">
-                                <i class="fa-solid fa-envelope"></i>
-                                <div class="contact-icon-items">
-                                    <h3>E-mail us:</h3>
-                                    <p>info@superbad.com</p>
-                                </div>
-                            </div>
-                            <div class="gym-contact-icon-info-container">
-                                <i class="fa-solid fa-square-phone"></i>
-                                <div class="contact-icon-items">
-                                    <h3>Phone:</h3>
-                                    <a href="tel:+13132838348"> +1 (313) 283-8348</a>
-                                </div>
+                    <div class="service-category-container">
+                        <div class="service">
+                            <div class="service-img-container">
+                                <img class="service-image" src="./Media/hitting-bad-unsplash.jpg" alt="boxing-service" />
                             </div>
 
-                        </div>
-                        <div class="operation-hours-container">
-                            <h2 class="operation-hours-title">Hours of Operation</h2>
-                            <p><span class="operation-hours-item">Monday-Friday:</span> 5:00 AM - 8:00 PM</p>
-                            <p><span class="operation-hours-item">Saturday-Sunday:</span> 10:00 AM - 2:00 PM</p>
-                            <p><span class="operation-hours-item">Sunday:</span> Closed</p>
+                            <p class="service-name">BOXING</p>
+                            <p class="service-details">
+                                Train like a fighter in an authentic Detroit boxing environment built on discipline, hard
+                                work, and championship
+                                mentality. Our Boxing Training program is designed for all skill levels — from beginners
+                                learning the fundamentals to
+                                amateur and professional fighters preparing for competition.
 
+                                At SuperBad Boxing Gym, members develop real boxing skills including footwork, defense,
+                                combinations, ring IQ,
+                                conditioning, and mental toughness through structured, high-energy training sessions led by
+                                experienced coaches and
+                                fighters.
+
+                                Whether your goal is to compete, get in shape, build confidence, or challenge yourself
+                                mentally and physically, our
+                                boxing program pushes you to become stronger inside and outside the ring.
+                        </div>
+                        <div class="service">
+                            <div class="service-img-container">
+                                <img class="service-image" src="./Media/strength-&-conditioning-unsplash.jpg"
+                                    alt="boxing-service" />
+                            </div>
+
+                            <p class="service-name">STRENGTH AND CONDITIONING</p>
+                            <p class="service-details">
+                                Our Strength & Conditioning program is built to develop explosive power, speed, endurance,
+                                and total-body athleticism.
+                                Inspired by elite-level boxing and sports performance training, these sessions are designed
+                                to push your physical and
+                                mental limits while helping you become stronger, faster, and more resilient.
+
+                                Whether you’re an athlete preparing for competition or someone looking to improve overall
+                                fitness, lose weight, or build
+                                confidence, our coaches create an intense and motivating environment focused on real
+                                results.
+
+                                Every workout combines functional strength training, boxing conditioning, agility drills,
+                                and high-intensity exercises
+                                to maximize performance and help you reach your goals.
+                            </p>
+                        </div>
+                        <div class="service">
+                            <div class="service-img-container"><img class="service-image"
+                                    src="./Media/private-session-splash.jpg" alt="boxing-service" /></div>
+
+                            <p class="service-name">PRIVATE LESSONS</p>
+                            <p class="service-details">
+                                Take your training to the next level with personalized coaching tailored specifically to
+                                your goals. Our Private Lessons
+                                program provides focused, one-on-one instruction designed to accelerate your progress and
+                                help you train smarter,
+                                harder, and more effectively.
+
+                                Whether you are a beginner learning the basics, an athlete preparing for competition, or
+                                someone looking to improve
+                                fitness and confidence, our experienced coaches create customized training sessions built
+                                around your individual needs
+                                and performance level.
+
+                                Train directly with knowledgeable boxing coaches in a championship-driven environment that
+                                emphasizes technique,
+                                discipline, conditioning, and personal growth.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Mission-statement-container">
+                        <h1>Mission Statement</h1>
+                        <div class="mission-item">
+                            <div class="mission-item-title">
+                                <h2>Who we are?</h2>
+                                <p class="mission-description">
+                                    At <span class="mission-word-color">SuperBad Boxing Gym</span>, we are more than a
+                                    boxing gym — we are a
+                                    Detroit-born family and community dedicated to building
+                                    champions inside and outside the ring. Founded by professional fighters with deep roots
+                                    in the city, we use boxing as a
+                                    tool to develop discipline, confidence, leadership, and resilience in people of all
+                                    ages. Inspired by Detroit’s fighting
+                                    spirit and legendary boxing culture, we strive to create an environment where hard work,
+                                    respect, and accountability
+                                    shape the next generation.
+                                </p>
+                            </div>
+                            <div class="mission-item-title">
+                                <h2>Why People Choose Us?</h2>
+                                <p class="mission-description">
+                                    People choose <span class="mission-word-color">SuperBad Boxing Gym</span> because we
+                                    combine elite-level boxing knowledge with a
+                                    genuine family atmosphere.
+                                    Whether someone is training to compete, get in shape, build confidence, or simply find
+                                    direction, our gym provides a
+                                    supportive environment where everyone is pushed to grow. Our members train alongside
+                                    champions, experienced coaches, and
+                                    motivated athletes who inspire one another daily. We are known for our authentic boxing
+                                    culture, strong mentorship, and
+                                    commitment to helping every individual reach their full potential
+                                </p>
+                            </div>
+                            <div class="mission-item-title">
+                                <h2>Our Mission</h2>
+                                <p class="mission-description">
+                                    Our mission is to empower the youth and community of Detroit through boxing, fitness,
+                                    mentorship, and opportunity. We
+                                    aim to build champions in life before champions in the ring by teaching discipline,
+                                    mental toughness, self-respect, and
+                                    perseverance. Through structured training, guidance, and positive leadership, we seek to
+                                    create a safe and motivating
+                                    environment where individuals can transform their lives and pursue greatness both
+                                    athletically and personally
+                                </p>
+                            </div>
+                            <div class="mission-item-title">
+                                <h2>Our Team</h2>
+                                <p class="mission-description">
+                                    Our team is led by experienced fighters, trainers, and mentors who understand the
+                                    dedication required to succeed at the
+                                    highest level. Co-founded by Tony Harrison and L.J. Harrison, our coaches bring
+                                    real-world experience, passion, and
+                                    mentorship to every athlete who walks through our doors. We believe in leading by
+                                    example and creating strong
+                                    relationships with our members through encouragement, accountability, and hard work.
+                                </p>
+                            </div>
+                            <div class="mission-item-title">
+                                <h2>What We Offer:</h2>
+                                <p class="mission-description">
+                                    At <span class="mission-word-color">SuperBad Boxing Gym</span>
+
+                                </p>
+
+                                <ul class="mission-description">
+                                    <li>Elite boxing training for beginners, amateurs, and professional fighters</li>
+                                    <li>Youth development and mentorship programs</li>
+                                    <li>Strength and conditioning</li>
+                                    <li>Sparring and competition preparation</li>
+                                    <li>Fitness and weight-loss boxing programs</li>
+                                    <li>Personal training and athlete developmen</li>
+                                    <li>A motivating community focused on growth, discipline, and excellence</li>
+                                </ul>
+                                <p id="mission-last-par" class="mission-description">Our goal is to provide every member —
+                                    regardless of age or
+                                    experience — with the tools,
+                                    coaching, and environment needed
+                                    to become stronger mentally, physically, and emotionally.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-
-            </div>
-            <!-- ════════════════════════════════════════════
-                 SUPERBAD BOXING GYM — SITE FOOTER
-                 Copy this footer block into every page,
-                 replacing the existing <footer> tag.
-                 Adjust ../  vs ./  paths based on page depth.
-            ════════════════════════════════════════════ -->
-
-            <footer class="site-footer">
-                <div class="sf-inner">
-
-                    <!-- Col 1: Brand -->
-                    <div class="sf-brand">
-                        <a href="../index.html">
-                            <img src="../Media/logo.png" alt="SuperBad Boxing Gym logo" class="sf-logo" />
-                        </a>
-                        <p class="sf-tagline">Built in Detroit. Driven by Excellence.</p>
-                        <p class="sf-desc">
-                            SuperBad Boxing Gym is more than a place to train — it is a community
-                            built on discipline, hard work, and the fighting spirit of Detroit.
-                        </p>
-                        <div class="sf-socials">
-                            <a href="#" aria-label="Facebook" class="sf-social-link">
+                <div class="coaches-section-container">
+                    <h2>OUR COACHES:</h2>
+                    <!-- carousel button -->
+                    <button type="button" class="coach-carousel-arrow coach-carousel-arrow--prev"> <i
+                            class="fa-solid fa-circle-chevron-left"></i></button>
+                    <button type="button" class="coach-carousel-arrow coach-carousel-arrow--next"> <i
+                            class="fa-solid fa-circle-chevron-right"></i></button>
+                    <!-- carousel container -->
+                    <div class="coach-items-container">
+                        <!-- carousel slide -->
+                        <div class="coach-items">
+                            <img src="./Media/LJ-profile-img.png" class="coach-img" alt="coach profile picture" />
+                            <p class="coach-name">L.J Harrison</p>
+                            <div class="social-media-container">
                                 <i class="fa-brands fa-square-facebook"></i>
-                            </a>
-                            <a href="#" aria-label="Instagram" class="sf-social-link">
-                                <i class="fa-brands fa-square-instagram"></i>
-                            </a>
-                            <a href="#" aria-label="Twitter / X" class="sf-social-link">
                                 <i class="fa-brands fa-x-twitter"></i>
-                            </a>
-                            <a href="#" aria-label="YouTube" class="sf-social-link">
-                                <i class="fa-brands fa-square-youtube"></i>
-                            </a>
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                                <i class="fa-solid fa-square-phone"></i>
+                            </div>
+                        </div>
+                        <div class="coach-items">
+                            <img src="./Media/LJ-profile-img.png" class="coach-img" alt="coach profile picture" />
+                            <p class="coach-name">Tony Harrison</p>
+                            <div class="social-media-container">
+                                <i class="fa-brands fa-square-facebook"></i>
+                                <i class="fa-brands fa-x-twitter"></i>
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                                <i class="fa-solid fa-square-phone"></i>
+                            </div>
+                        </div>
+                        <div class="coach-items">
+                            <img src="./Media/LJ-profile-img.png" class="coach-img" alt="coach profile picture" />
+                            <p class="coach-name">Coach Name</p>
+                            <div class="social-media-container">
+                                <i class="fa-brands fa-square-facebook"></i>
+                                <i class="fa-brands fa-x-twitter"></i>
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                                <i class="fa-solid fa-square-phone"></i>
+                            </div>
+                        </div>
+                        <div class="coach-items">
+                            <img src="./Media/LJ-profile-img.png" class="coach-img" alt="coach profile picture" />
+                            <p class="coach-name">Tony Harrison</p>
+                            <div class="social-media-container">
+                                <i class="fa-brands fa-square-facebook"></i>
+                                <i class="fa-brands fa-x-twitter"></i>
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                                <i class="fa-solid fa-square-phone"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="contact-us-container">
+                    <h2 id="contact-us-title">Contact-us</h2>
+                    <div class="hour-of-operation-form-container">
+                        <div class="contact-us-form-container">
+                            <form class="contact-form">
+                                <div class="form-input-label-container">
+                                    <div class="form-input-container">
+                                        <label for="full-name-input-container">
+                                            <i class="fa-solid fa-user"></i>
+                                        </label>
+                                        <input class="label-input" type="text" name="full-name" id="name"
+                                            placeholder="full-name" required />
+                                    </div>
+                                    <div class="form-input-container">
+                                        <label for="email">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </label>
+                                        <input class="label-input" type="text" name="email" id="email" placeholder="email"
+                                            required />
+                                    </div>
+                                    <div class="form-input-container">
+                                        <textarea id="formMessage" class="form-message-box" rows="7"
+                                            placeholder="   Message..."></textarea>
+                                    </div>
+                                </div>
+                                <button id="contact-btn" type="button">send</button>
+                            </form>
+                        </div>
+                        <div class="contact-us-info-container">
+                            <h2 id="get-in-touch-title">Get in touch with SuperBad</h2>
+                            <p class="contact-text">
+                                Whether you're ready to take your first step into boxing or get in shape, or have any
+                                questions about our classes, training
+                                programs, or memberships, we're here to help.
+                            </p>
+                            <div class="gym-contact-info-container">
+                                <div class="gym-contact-icon-info-container">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div class="contact-icon-items">
+                                        <h3>Gym Location:</h3>
+                                        <p>8701 Puritan Ave, Detroit, MI 48238</p>
+                                    </div>
+                                </div>
+                                <div class="gym-contact-icon-info-container">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <div class="contact-icon-items">
+                                        <h3>E-mail us:</h3>
+                                        <p>info@superbad.com</p>
+                                    </div>
+                                </div>
+                                <div class="gym-contact-icon-info-container">
+                                    <i class="fa-solid fa-square-phone"></i>
+                                    <div class="contact-icon-items">
+                                        <h3>Phone:</h3>
+                                        <a href="tel:+13132838348"> +1 (313) 283-8348</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="operation-hours-container">
+                                <h2 class="operation-hours-title">Hours of Operation</h2>
+                                <p><span class="operation-hours-item">Monday-Friday:</span> 5:00 AM - 8:00 PM</p>
+                                <p><span class="operation-hours-item">Saturday-Sunday:</span> 10:00 AM - 2:00 PM</p>
+                                <p><span class="operation-hours-item">Sunday:</span> Closed</p>
+
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Col 2: Quick Links -->
-                    <div class="sf-col">
-                        <h3 class="sf-col-title">Quick Links</h3>
-                        <ul class="sf-links">
-                            <li><a href="/Pages/about.html">About</a></li>
-                            <li><a href="/Pages/coaches.html">Coaches</a></li>
-                            <li><a href="/Pages/fighters.html">Fighters</a></li>
-                            <li><a href="/Pages/gallery.html">Gallery</a></li>
-                            <li><a href="/Pages/membership.html">Membership</a></li>
-                            <li><a href="/Pages/events.html">Events</a></li>
-                            <li><a href="./Pages/program.html">Program</a></li>
-                            <li><a href="./Pages/tribute.html">Tribute</a></li>
-                            <li><a href="./Pages/contact-us.html">Contact Us</a></li>
-                        </ul>
-                    </div>
 
-                    <!-- Col 3: Contact Info -->
-                    <div class="sf-col">
-                        <h3 class="sf-col-title">Contact</h3>
-                        <ul class="sf-contact-list">
-                            <li>
-                                <i class="fa-solid fa-location-dot"></i>
-                                <span>8701 Puritan Ave<br />Detroit, MI 48238</span>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-phone"></i>
-                                <a href="tel:+13132838348">(313) 283-8348</a>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-globe"></i>
-                                <a href="http://tonysuperbadharrison.com" target="_blank" rel="noopener">
-                                    tonysuperbadharrison.com
-                                </a>
-                            </li>
-                        </ul>
-
-                        <h3 class="sf-col-title sf-col-title--hours">Hours</h3>
-                        <ul class="sf-hours">
-                            <li>
-                                <span>Mon – Fri</span>
-                                <span>7:00 AM – 8:00 PM</span>
-                            </li>
-                            <li>
-                                <span>Saturday</span>
-                                <span>8:00 AM – 7:00 PM</span>
-                            </li>
-                            <li class="sf-hours-closed">
-                                <span>Sunday</span>
-                                <span>Closed</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Col 4: CTA -->
-                    <div class="sf-col sf-col--cta">
-                        <h3 class="sf-col-title">Start Your Journey</h3>
-                        <p class="sf-cta-text">
-                            Train with purpose. Build confidence. Join the SuperBad family today.
-                        </p>
-                        <a href="./contact-us.html" class="sf-cta-btn">Get Started</a>
-                        <a href="./membership.html" class="sf-cta-link">View Membership Options →</a>
-                    </div>
-
-                </div><!-- end sf-inner -->
-
-                <!-- Bottom bar -->
-                <div class="sf-bottom">
-                    <p class="sf-copy">
-                        &copy; <span id="sfYear"></span> SuperBad Boxing Gym. Detroit, MI. All rights reserved.
-                    </p>
-                    <p class="sf-credit">
-                        Designed &amp; built by
-                        <span class="sf-credit-name">Galekwan Sango</span>
-                    </p>
                 </div>
+                <!-- ════════════════════════════════════════════
+                    SUPERBAD BOXING GYM — SITE FOOTER
+                    Copy this footer block into every page,
+                    replacing the existing <footer> tag.
+                    Adjust ../  vs ./  paths based on page depth.
+                ════════════════════════════════════════════ -->
 
-            </footer>
+                <footer class="site-footer">
+                    <div class="sf-inner">
 
-            <script>
-                // Auto-update copyright year
-                const sfYear = document.getElementById('sfYear');
-                if (sfYear) sfYear.textContent = new Date().getFullYear();
-            </script>
+                        <!-- Col 1: Brand -->
+                        <div class="sf-brand">
+                            <a href="../index.html">
+                                <img src="../Media/logo.png" alt="SuperBad Boxing Gym logo" class="sf-logo" />
+                            </a>
+                            <p class="sf-tagline">Built in Detroit. Driven by Excellence.</p>
+                            <p class="sf-desc">
+                                SuperBad Boxing Gym is more than a place to train — it is a community
+                                built on discipline, hard work, and the fighting spirit of Detroit.
+                            </p>
+                            <div class="sf-socials">
+                                <a href="#" aria-label="Facebook" class="sf-social-link">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                </a>
+                                <a href="#" aria-label="Instagram" class="sf-social-link">
+                                    <i class="fa-brands fa-square-instagram"></i>
+                                </a>
+                                <a href="#" aria-label="Twitter / X" class="sf-social-link">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                                <a href="#" aria-label="YouTube" class="sf-social-link">
+                                    <i class="fa-brands fa-square-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Col 2: Quick Links -->
+                        <div class="sf-col">
+                            <h3 class="sf-col-title">Quick Links</h3>
+                            <ul class="sf-links">
+                                <li><a href="/Pages/about.html">About</a></li>
+                                <li><a href="/Pages/coaches.html">Coaches</a></li>
+                                <li><a href="/Pages/fighters.html">Fighters</a></li>
+                                <li><a href="/Pages/gallery.html">Gallery</a></li>
+                                <li><a href="/Pages/membership.html">Membership</a></li>
+                                <li><a href="/Pages/events.html">Events</a></li>
+                                <li><a href="./Pages/program.html">Program</a></li>
+                                <li><a href="./Pages/tribute.html">Tribute</a></li>
+                                <li><a href="./Pages/contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 3: Contact Info -->
+                        <div class="sf-col">
+                            <h3 class="sf-col-title">Contact</h3>
+                            <ul class="sf-contact-list">
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>8701 Puritan Ave<br />Detroit, MI 48238</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <a href="tel:+13132838348">(313) 283-8348</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-globe"></i>
+                                    <a href="http://tonysuperbadharrison.com" target="_blank" rel="noopener">
+                                        tonysuperbadharrison.com
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <h3 class="sf-col-title sf-col-title--hours">Hours</h3>
+                            <ul class="sf-hours">
+                                <li>
+                                    <span>Mon – Fri</span>
+                                    <span>7:00 AM – 8:00 PM</span>
+                                </li>
+                                <li>
+                                    <span>Saturday</span>
+                                    <span>8:00 AM – 7:00 PM</span>
+                                </li>
+                                <li class="sf-hours-closed">
+                                    <span>Sunday</span>
+                                    <span>Closed</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 4: CTA -->
+                        <div class="sf-col sf-col--cta">
+                            <h3 class="sf-col-title">Start Your Journey</h3>
+                            <p class="sf-cta-text">
+                                Train with purpose. Build confidence. Join the SuperBad family today.
+                            </p>
+                            <a href="./contact-us.html" class="sf-cta-btn">Get Started</a>
+                            <a href="./membership.html" class="sf-cta-link">View Membership Options →</a>
+                        </div>
+
+                    </div><!-- end sf-inner -->
+
+                    <!-- Bottom bar -->
+                    <div class="sf-bottom">
+                        <p class="sf-copy">
+                            &copy; <span id="sfYear"></span> SuperBad Boxing Gym. Detroit, MI. All rights reserved.
+                        </p>
+                        <p class="sf-credit">
+                            Designed &amp; built by
+                            <span class="sf-credit-name">Galekwan Sango</span>
+                        </p>
+                    </div>
+
+                </footer>
+
+                <script>
+                    // Auto-update copyright year
+                    const sfYear = document.getElementById('sfYear');
+                    if (sfYear) sfYear.textContent = new Date().getFullYear();
+                </script>
+            </div>
+
+            <script src="./scripts/index.js"></script>
+            <script src="./scripts/coaches.js"></script>
         </div>
 
-
-
-        <script src="./scripts/index.js"></script>
-        <script src="./scripts/coaches.js"></script>
-
-</body>
+    </body>
 
 </html>
